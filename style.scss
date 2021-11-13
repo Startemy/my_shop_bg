@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    font-style: normal;
+}
+.container{
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.head{
+    background-color: #222222;
+}
+.head__flex{
+display: flex;
+justify-content: space-between;
+padding: 19px 10px;
+align-items: center;
+}
+.head__left__flex{
+    display: flex;
+    align-items: center;
+}
+.logo{
+    margin-right: 41px;
+}
+.head__right__flex{
+    display: flex;
+    align-items: center;
+}
+.right__item:not(:last-child){
+    margin-right: 33px;
+}
+.nostyle{
+    list-style: none;
+}
+
+//Блок Промо//
+.reklama{
+    background-color: #F1E4E6;
+    height: 764px;
+}
+.reklama__flex{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    background: url('image/man_on_head.png') no-repeat -216px;
+
+}
+.brand{
+    max-width: 420px;
+    align-items: center;
+    justify-content: flex-end;
+    border-left: 12px solid #F16D7F;
+    padding-left: 16px;
+}
+.fashion {
+    color: #F16D7F;
+    font-size: 32px;
+    line-height: 38px;
+}
+.brand_text{
+    font-size: 48px;
+    line-height: 58px;
+}
+.luxury_text{
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
+}

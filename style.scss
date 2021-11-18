@@ -374,4 +374,55 @@ body{
 }
 
 
+///////////////CATALOG///////////////////////
+.page__title{
+    background: #F8F3F4;
+    .page__title__flex{
+    min-height: 148px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+        .title{
+            font-size: 24px;
+            line-height: 29px;
+            color: #F16D7F;
+        }
+        a{
+            text-decoration: none;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;
+            color: #636363;
+        }
+    }
+}
 
+
+
+.filter__flex{
+    display: flex;
+    align-items: center;
+    margin: 51px 0 64px 0;
+}
+.filter{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    padding-left: 16px;
+}
+.fast__filter__flex{
+    display: flex;
+    li{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 17px;
+        color: #6F6E6E;
+    }
+}
+.fast__filter__flex li:not(:last-child){
+    margin-right: 28px;
+}

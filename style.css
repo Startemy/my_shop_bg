@@ -285,15 +285,12 @@ body {
   background: transparent;
 }
 
-.bottom_cont_prod a {
-  text-decoration: none;
-}
-
 .bottom_cont_prod p {
   font-size: 16px;
   line-height: 19px;
   color: #F26376;
   margin: 15px 37px;
+  text-decoration: none;
 }
 
 .bottom_cont_prod:hover {

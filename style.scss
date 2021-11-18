@@ -226,16 +226,15 @@ body{
     height: 48px;
     border: 1px solid #F16D7F;
     background: transparent;
-    a {
-        text-decoration: none;
-    }
     p{
         font-size: 16px;
         line-height: 19px;
         color: #F26376;
         margin: 15px 37px;
+        text-decoration: none;
     }
 }
+
 .bottom_cont_prod:hover{
     background: #F16D7F;
     p{

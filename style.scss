@@ -14,191 +14,191 @@ body{
     padding: 0 10px;
 }
 
-//Голова
+//Голова//
 .head{
     background-color: #222222;
-}
-.head__flex{
-display: flex;
-justify-content: space-between;
-padding: 19px 10px;
-align-items: center;
-}
-.head__left__flex{
-    display: flex;
-    align-items: center;
-}
-.logo{
-    margin-right: 41px;
-}
-.head__right__flex{
-    display: flex;
-    align-items: center;
-}
-.right__item:not(:last-child){
-    margin-right: 33px;
-}
-.nostyle{
-    list-style: none;
+    .head__flex{
+        display: flex;
+        justify-content: space-between;
+        padding: 19px 10px;
+        align-items: center;
+        }
+        .head__left__flex{
+            display: flex;
+            align-items: center;
+            .logo{
+                margin-right: 41px;
+            }
+        }
+        .head__right__flex{
+            display: flex;
+            align-items: center;
+            .right__item:not(:last-child){
+                margin-right: 33px;
+            }
+        }
+        .nostyle{
+            list-style: none;
+        }
 }
 
-//Блок Промо//
+
+//////////////Блок Промо///////////
 .reklama{
     background-color: #F1E4E6;
     height: 764px;
-}
-.reklama__flex{
-    display: flex;
-    height: 100%;
-    align-items: center;
-    justify-content: flex-end;
-    background: url('image/man_on_head.png') no-repeat -216px;
-
-}
-.brand{
-    max-width: 420px;
-    align-items: center;
-    justify-content: flex-end;
-    border-left: 12px solid #F16D7F;
-    padding-left: 16px;
-}
-
-.brand_text{
-    font-size: 48px;
-    line-height: 58px;
-}
-.luxury_text{
-    font-weight: bold;
-    font-size: 32px;
-    line-height: 38px;
-}
-.fashion {
-    color: #F16D7F;
+    .reklama__flex{
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: flex-end;
+        background: url('image/man_on_head.png') no-repeat -216px;
+        .brand{
+            max-width: 420px;
+            border-left: 12px solid #F16D7F;
+            padding-left: 16px;
+            .brand_text{
+                font-size: 48px;
+                line-height: 58px;
+            }
+            .luxury_text{
+                font-weight: bold;
+                font-size: 32px;
+                line-height: 38px;
+            }
+            .fashion {
+                color: #F16D7F;
+            }
+        }
+    }
 }
 
-//Быстрое меню
+////////////Быстрое меню/////////////
 .fast__menu__flex{
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     margin-top: 65px;
     margin-bottom: 96px;
+    .fm__picture:not(:last-child){
+        width: 360px;
+        height: 260px; 
+        vertical-align: center; 
+    }
+    .fm__picture{
+        width: 100%;
+        height: 180px;
+        text-decoration: none;
+    }
+    .promo{
+        margin-top: 105px;
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    .acces{
+        margin-top: 65px;
+    }
+    .for{
+        text-transform: uppercase;
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center;
+        color: #F16D7F;
+    }
+    .fw{
+    background-image: url('image/for_women.png');
+    }
+    .fm{
+        background-image: url('image/for_man.png');
+    }
+    .fk{
+        background-image: url('image/for_kids.png');
+    }
+    .ac{
+        background-image: url('image/accesorise.png');
+    }
+}
 
-}
-.fm__picture:not(:last-child){
-width: 360px;
-height: 260px;  
-}
-.fm__picture{
-    width: 100%;
-    height: 180px;  
-}
-.fw{
-background-image: url('image/for_women.png');
-}
-.fm{
-    background-image: url('image/for_man.png');
-}
-.fk{
-    background-image: url('image/for_kids.png');
-}
-.ac{
-    background-image: url('image/accesorise.png');
-}
-
-//Product
+////////Products///////
 .products{
     text-align: center;
-}
-.prod__head{
-    font-size: 30px;
-    line-height: 36px;
-    color: #222222;
-}
-.prod__head_prgf{
-    font-size: 14px;
-    line-height: 17px;
-    color: #9F9F9F;
-    margin-bottom: 48px;
+    .prod__head{
+        font-size: 30px;
+        line-height: 36px;
+        color: #222222;
+    }
+    .prod__head_prgf{
+        font-size: 14px;
+        line-height: 17px;
+        color: #9F9F9F;
+        margin-bottom: 48px;
+    }
 }
 
-//Product Item
+//////Product Item///////
 .products__flex{
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
+    .item__product{
+        width: 360px;
+        height: 581px;
+    }
 }
-.item__product{
-    width: 360px;
-    height: 581px;
-}
+
+///////Описание продукта////////
 .product__desc{
     padding: 25px 29px 20px 16px;
     text-align: left;
+    .name_prod{
+        font-size: 13px;
+        line-height: 16px;
+        color: #000000;
+    }
+    .desc_prod{
+        font-size: 14px;
+        line-height: 17px;
+        color: #5D5D5D;
+        margin: 13px 0 18px 0;
+    }
+    .price{
+        font-size: 16px;
+        line-height: 19px;
+        color: #F16D7F;
+    }
 }
-.name_prod{
-    font-size: 13px;
-    line-height: 16px;
-    color: #000000;
-}
-.desc_prod{
-    font-size: 14px;
-    line-height: 17px;
-    color: #5D5D5D;
-    margin: 13px 0 18px 0;
-}
-.price{
-    font-size: 16px;
-    line-height: 19px;
-    color: #F16D7F;
-}
+
 .item__product__a{
     text-decoration: none;
 }
 .pctr__item__product{
     position: relative;
+    .bottom__img__prod__hover{ //Кнопка продукта добавить в корзину
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        visibility: hidden;
+        width: 139px;
+        height: 44px;
+        border: 1px solid white;
+        background-color: transparent;
+        position: absolute;
+        margin: -250px 110px;
+        .img__cart__btm{
+            width: 26px;
+            margin-right: 11px;
+        }
+        .atc__btm__prod__hover{
+            font-size: 14px;
+            line-height: 17px;
+            color: #FFFFFF;
+        }
+    }
 }
-
-//Кнопка Смотреть все продукты////
-.bottom_cont_prod{
-    margin-top: 48px;
-    margin-bottom: 95px;
-    width: 212px;
-    height: 48px;
-    border: 1px solid #F16D7F;
-    background-color: transparent;
-}
-.bottom_cont_prod_text{
-    font-size: 16px;
-    line-height: 19px;
-    color: #F26376;
-    margin: 15px 37px;
-}
-///--------------------------------//////
-//-------Кнопка продукта-------//
-.bottom__img__prod__hover{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    visibility: hidden;
-    width: 139px;
-    height: 44px;
-    border: 1px solid white;
-    background-color: transparent;
-    position: absolute;
-    margin: -250px 110px;
-}
-.img__cart__btm{
-    width: 26px;
-    margin-right: 11px;
-}
-.atc__btm__prod__hover{
-    font-size: 14px;
-    line-height: 17px;
-    color: #FFFFFF;
-}
-//------------------------------///
 
 //////Наведение на продукт/////
 .overlay{
@@ -218,8 +218,151 @@ background-image: url('image/for_women.png');
     visibility: visible;
 }
 //-------------------------------------//
+//////Кнопка Смотреть все продукты////////
+.bottom_cont_prod{
+    margin-top: 48px;
+    margin-bottom: 95px;
+    width: 212px;
+    height: 48px;
+    border: 1px solid #F16D7F;
+    background-color: transparent;
+    .bottom_cont_prod_text{
+        font-size: 16px;
+        line-height: 19px;
+        color: #F26376;
+        margin: 15px 37px;
+    }
+}
+///--------------------------------//////
+
+
 
 ////////////FOOTER/////////
+.footer__head{
 
+    background: #222224;;
+}
+
+
+
+.footer__head_flex{
+    height: 341px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.feature{
+    max-width: 360px;
+}
+.feature__text__head{
+    font-size: 19.96px;
+    line-height: 24px;
+    color: #FBFBFB;
+    margin: 28px 0 16px 0;
+}
+.feature__text__desc{
+    padding: 0 27px 0 27px;
+    font-weight: 300;
+    font-size: 13.972px;
+    line-height: 17px;
+    text-align: center;
+    color: #FBFBFB;
+}
 //----------------------------------//
+
+.footer__center{
+    background-image: url('image/surf.png');
+}
+.footer__center__flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 448px;
+}
+.intersec{
+    width: 360px;
+    text-align: center;
+}
+.round{
+    border-radius: 100px; 
+    box-shadow: 0 0 7px #666; 
+}
+.intersec__text__desc{
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #222224;
+}
+
+.popul{
+    font-style: italic;
+}
+.subscribe{
+    width: 557px;
+    text-align: center;
+    .subscribe__text__head{
+        font-size: 24px;
+        line-height: 167.2%;
+        color: #222224;
+    }
+    .subscribe__text__desc{
+        font-size: 18px;
+        line-height: 167.2%;
+        color: #222224;
+        margin-bottom: 32px;
+    }
+
+    .email__inp{
+        background: #E1E1E1;
+        height: 49px;
+        width: 256px;
+        border-radius: 15px 0 0 15px;
+        border: none;
+        outline: none;
+        padding-left: 22px;
+    }
+    .email__sub{
+        background: #F16D7F;
+        height: 49px;
+        width: 100px;
+        border-radius: 0 15px 15px 0;
+        border: none;
+        color:white;
+        text-align: center;
+    }
+}
+
+
+.footer__protect{
+    background: #222224;
+    .footer__protect__flex{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 79px;
+    }
+}
+
+.social__box{
+    display: flex;
+    .social{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        background: white;
+        list-style: none;
+    }
+    .social:not(:last-child){
+        margin-right: 7px;
+    }
+    .social:hover{
+        background-color: #F16D7F;
+    }
+    .social:hover .img__social{
+        fill:white; 
+    }
+}
 

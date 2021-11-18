@@ -278,6 +278,8 @@ body{
 /////////FOOTER CENTER/////////////////
 .footer__center{
     background-image: url('image/surf.png');
+    background-repeat: no-repeat;
+    background-position: center;
     .footer__center__flex{
         display: flex;
         align-items: center;

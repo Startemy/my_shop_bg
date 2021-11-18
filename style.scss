@@ -201,139 +201,146 @@ body{
 }
 
 //////Наведение на продукт/////
-.overlay{
+.overlay{           //темный слой
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.1); /* Настройка цвета и прозрачности для блока с заголовком */
-    transition: background 0.5s ease;
+    background: rgba(0, 0, 0, 0.1);
+    transition: 0.5s ease;
 }
 .pctr__item__product:hover .overlay {
     display: block;
-    background: rgba(0, 0, 0, 0.7); /* Настройка цвета и прозрачности для блока с заголовком при наведении */
+    background: rgba(0, 0, 0, 0.7);
 }
 .pctr__item__product:hover .bottom__img__prod__hover{
     visibility: visible;
 }
 //-------------------------------------//
+
 //////Кнопка Смотреть все продукты////////
 .bottom_cont_prod{
-    margin-top: 48px;
-    margin-bottom: 95px;
+    margin: 48px auto 95px auto;
     width: 212px;
     height: 48px;
     border: 1px solid #F16D7F;
-    background-color: transparent;
-    .bottom_cont_prod_text{
+    background: transparent;
+    a {
+        text-decoration: none;
+    }
+    p{
         font-size: 16px;
         line-height: 19px;
         color: #F26376;
         margin: 15px 37px;
     }
 }
+.bottom_cont_prod:hover{
+    background: #F16D7F;
+    p{
+        color: white;
+    }
+}
 ///--------------------------------//////
 
 
-
-////////////FOOTER/////////
+////////////FOOTER HEAD/////////
 .footer__head{
-
-    background: #222224;;
-}
-
-
-
-.footer__head_flex{
-    height: 341px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-}
-.feature{
-    max-width: 360px;
-}
-.feature__text__head{
-    font-size: 19.96px;
-    line-height: 24px;
-    color: #FBFBFB;
-    margin: 28px 0 16px 0;
-}
-.feature__text__desc{
-    padding: 0 27px 0 27px;
-    font-weight: 300;
-    font-size: 13.972px;
-    line-height: 17px;
-    text-align: center;
-    color: #FBFBFB;
+    background: #222224;
+    .footer__head_flex{
+        height: 341px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        .feature{
+            max-width: 360px;
+            .feature__text__head{
+                font-size: 19.96px;
+                line-height: 24px;
+                color: #FBFBFB;
+                margin: 28px 0 16px 0;
+            }
+            .feature__text__desc{
+                padding: 0 27px 0 27px;
+                font-weight: 300;
+                font-size: 13.972px;
+                line-height: 17px;
+                text-align: center;
+                color: #FBFBFB;
+            }
+        }
+    }
 }
 //----------------------------------//
 
+
+/////////FOOTER CENTER/////////////////
 .footer__center{
     background-image: url('image/surf.png');
-}
-.footer__center__flex{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 448px;
-}
-.intersec{
-    width: 360px;
-    text-align: center;
-}
-.round{
-    border-radius: 100px; 
-    box-shadow: 0 0 7px #666; 
-}
-.intersec__text__desc{
-    font-size: 20px;
-    line-height: 24px;
-    text-align: center;
-    color: #222224;
-}
-
-.popul{
-    font-style: italic;
-}
-.subscribe{
-    width: 557px;
-    text-align: center;
-    .subscribe__text__head{
-        font-size: 24px;
-        line-height: 167.2%;
-        color: #222224;
+    .footer__center__flex{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 448px;
+        .intersec{
+            width: 360px;
+            text-align: center;
+            .round{
+                border-radius: 100px; 
+                box-shadow: 0 0 7px #666; 
+            }
+            .intersec__text__desc{
+                font-size: 20px;
+                line-height: 24px;
+                text-align: center;
+                color: #222224;
+                .popul{
+                    font-style: italic;
+                }
+            }
+        }
     }
-    .subscribe__text__desc{
-        font-size: 18px;
-        line-height: 167.2%;
-        color: #222224;
-        margin-bottom: 32px;
-    }
-
-    .email__inp{
-        background: #E1E1E1;
-        height: 49px;
-        width: 256px;
-        border-radius: 15px 0 0 15px;
-        border: none;
-        outline: none;
-        padding-left: 22px;
-    }
-    .email__sub{
-        background: #F16D7F;
-        height: 49px;
-        width: 100px;
-        border-radius: 0 15px 15px 0;
-        border: none;
-        color:white;
+    .subscribe{
+        width: 557px;
         text-align: center;
+        .subscribe__text__head{
+            font-size: 24px;
+            line-height: 167.2%;
+            color: #222224;
+        }
+        .subscribe__text__desc{
+            font-size: 18px;
+            line-height: 167.2%;
+            color: #222224;
+            margin-bottom: 32px;
+        }
+    
+        .email__inp{
+            background: #E1E1E1;
+            height: 49px;
+            width: 256px;
+            border-radius: 15px 0 0 15px;
+            border: none;
+            outline: none;
+            padding-left: 22px;
+        }
+        .email__sub{
+            background: #F16D7F;
+            height: 49px;
+            width: 100px;
+            border-radius: 0 15px 15px 0;
+            border: none;
+            color:white;
+            text-align: center;
+        }
     }
 }
+//////--------------------------------------//////
 
 
+////////////FOOTER PTOTECT///////////////////////
 .footer__protect{
     background: #222224;
     .footer__protect__flex{
@@ -341,28 +348,29 @@ body{
         justify-content: space-between;
         align-items: center;
         height: 79px;
+        .social__box{
+            display: flex;
+            .social{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 32px;
+                height: 32px;
+                background: white;
+                list-style: none;
+            }
+            .social:not(:last-child){
+                margin-right: 7px;
+            }
+            .social:hover{
+                background-color: #F16D7F;
+            }
+            .social:hover .img__social{
+                fill:white; 
+            }
+        }
     }
 }
 
-.social__box{
-    display: flex;
-    .social{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 32px;
-        height: 32px;
-        background: white;
-        list-style: none;
-    }
-    .social:not(:last-child){
-        margin-right: 7px;
-    }
-    .social:hover{
-        background-color: #F16D7F;
-    }
-    .social:hover .img__social{
-        fill:white; 
-    }
-}
+
 

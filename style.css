@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -265,15 +264,13 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.1);
-  /* Настройка цвета и прозрачности для блока с заголовком */
-  -webkit-transition: background 0.5s ease;
-  transition: background 0.5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 .pctr__item__product:hover .overlay {
   display: block;
   background: rgba(0, 0, 0, 0.7);
-  /* Настройка цвета и прозрачности для блока с заголовком при наведении */
 }
 
 .pctr__item__product:hover .bottom__img__prod__hover {
@@ -281,26 +278,37 @@ body {
 }
 
 .bottom_cont_prod {
-  margin-top: 48px;
-  margin-bottom: 95px;
+  margin: 48px auto 95px auto;
   width: 212px;
   height: 48px;
   border: 1px solid #F16D7F;
-  background-color: transparent;
+  background: transparent;
 }
 
-.bottom_cont_prod .bottom_cont_prod_text {
+.bottom_cont_prod a {
+  text-decoration: none;
+}
+
+.bottom_cont_prod p {
   font-size: 16px;
   line-height: 19px;
   color: #F26376;
   margin: 15px 37px;
 }
 
+.bottom_cont_prod:hover {
+  background: #F16D7F;
+}
+
+.bottom_cont_prod:hover p {
+  color: white;
+}
+
 .footer__head {
   background: #222224;
 }
 
-.footer__head_flex {
+.footer__head .footer__head_flex {
   height: 341px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -314,18 +322,18 @@ body {
           justify-content: center;
 }
 
-.feature {
+.footer__head .footer__head_flex .feature {
   max-width: 360px;
 }
 
-.feature__text__head {
+.footer__head .footer__head_flex .feature .feature__text__head {
   font-size: 19.96px;
   line-height: 24px;
   color: #FBFBFB;
   margin: 28px 0 16px 0;
 }
 
-.feature__text__desc {
+.footer__head .footer__head_flex .feature .feature__text__desc {
   padding: 0 27px 0 27px;
   font-weight: 300;
   font-size: 13.972px;
@@ -338,7 +346,7 @@ body {
   background-image: url("image/surf.png");
 }
 
-.footer__center__flex {
+.footer__center .footer__center__flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -351,47 +359,47 @@ body {
   height: 448px;
 }
 
-.intersec {
+.footer__center .footer__center__flex .intersec {
   width: 360px;
   text-align: center;
 }
 
-.round {
+.footer__center .footer__center__flex .intersec .round {
   border-radius: 100px;
   -webkit-box-shadow: 0 0 7px #666;
           box-shadow: 0 0 7px #666;
 }
 
-.intersec__text__desc {
+.footer__center .footer__center__flex .intersec .intersec__text__desc {
   font-size: 20px;
   line-height: 24px;
   text-align: center;
   color: #222224;
 }
 
-.popul {
+.footer__center .footer__center__flex .intersec .intersec__text__desc .popul {
   font-style: italic;
 }
 
-.subscribe {
+.footer__center .subscribe {
   width: 557px;
   text-align: center;
 }
 
-.subscribe .subscribe__text__head {
+.footer__center .subscribe .subscribe__text__head {
   font-size: 24px;
   line-height: 167.2%;
   color: #222224;
 }
 
-.subscribe .subscribe__text__desc {
+.footer__center .subscribe .subscribe__text__desc {
   font-size: 18px;
   line-height: 167.2%;
   color: #222224;
   margin-bottom: 32px;
 }
 
-.subscribe .email__inp {
+.footer__center .subscribe .email__inp {
   background: #E1E1E1;
   height: 49px;
   width: 256px;
@@ -401,7 +409,7 @@ body {
   padding-left: 22px;
 }
 
-.subscribe .email__sub {
+.footer__center .subscribe .email__sub {
   background: #F16D7F;
   height: 49px;
   width: 100px;
@@ -428,13 +436,13 @@ body {
   height: 79px;
 }
 
-.social__box {
+.footer__protect .footer__protect__flex .social__box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.social__box .social {
+.footer__protect .footer__protect__flex .social__box .social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -450,15 +458,15 @@ body {
   list-style: none;
 }
 
-.social__box .social:not(:last-child) {
+.footer__protect .footer__protect__flex .social__box .social:not(:last-child) {
   margin-right: 7px;
 }
 
-.social__box .social:hover {
+.footer__protect .footer__protect__flex .social__box .social:hover {
   background-color: #F16D7F;
 }
 
-.social__box .social:hover .img__social {
+.footer__protect .footer__protect__flex .social__box .social:hover .img__social {
   fill: white;
 }
 /*# sourceMappingURL=style.css.map */

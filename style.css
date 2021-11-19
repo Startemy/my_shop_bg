@@ -286,7 +286,8 @@ body {
   border: 1px solid white;
   background-color: transparent;
   position: absolute;
-  margin: -250px 110px;
+  top: 45%;
+  left: 35%;
 }
 
 .pctr__item__product .bottom__img__prod__hover .img__cart__btm {
@@ -307,8 +308,8 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.1);
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .pctr__item__product:hover .overlay {
@@ -322,7 +323,7 @@ body {
 
 .bottom_cont_prod {
   margin: 48px auto 95px auto;
-  width: 212px;
+  width: 215px;
   height: 48px;
   border: 1px solid #F16D7F;
   background: transparent;

@@ -41,6 +41,24 @@ body{
             list-style: none;
         }
 }
+.quantity__cart{
+    position: relative;
+    .quantity{
+        top: -20%;
+        left: 75%;
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        width: 19px;
+        height: 19px;
+        border-radius: 200px; 
+        background:#F16D7F;;
+        font-size: 12px;
+        line-height: 14px;
+        color: #FFFFFF;
+    }
+}
 
 
 //////////////Блок Промо///////////
@@ -403,26 +421,35 @@ body{
     display: flex;
     align-items: center;
     margin: 51px 0 64px 0;
-}
-.filter{
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 17px;
-    color: #000000;
-    padding-left: 16px;
-}
-.fast__filter__flex{
-    display: flex;
-    li{
-        list-style: none;
-    }
-    a{
-        text-decoration: none;
+    position: relative;
+    justify-content: center;
+    .filter{
+        position: absolute;
+        left: 0%;
+        font-weight: 600;
         font-size: 14px;
         line-height: 17px;
-        color: #6F6E6E;
+        color: #000000;
+        padding-left: 16px;
+    }
+    .fast__filter__flex{
+        display: flex;
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 17px;
+            color: #6F6E6E;
+        }
     }
 }
+
 .fast__filter__flex li:not(:last-child){
     margin-right: 28px;
+}
+
+.pagination{
+    margin: 48px 0 96px 0;
 }

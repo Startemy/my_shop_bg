@@ -5,9 +5,29 @@
           box-sizing: border-box;
 }
 
-body {
-  font-family: sans-serif;
+@font-face {
+  font-family: 'lato-light';
+  src: url(fonts/Lato/Lato-Light.ttf);
   font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'lato-regular';
+  src: url(fonts/Lato/Lato-Regular.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'lato-bold';
+  src: url(fonts/Lato/Lato-Bold.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+
+body {
+  font-family: 'lato-regular';
 }
 
 .container {
@@ -179,11 +199,12 @@ body {
 }
 
 .fast__menu__flex .acces {
-  width: 28%;
+  width: 25%;
 }
 
 .fast__menu__flex .for {
   text-transform: uppercase;
+  font-family: 'lato-bold';
   font-size: 24px;
   line-height: 29px;
   text-align: center;
@@ -253,6 +274,7 @@ body {
   line-height: 17px;
   color: #5D5D5D;
   margin: 13px 0 18px 0;
+  font-family: 'lato-light';
 }
 
 .product__desc .price {
@@ -362,6 +384,7 @@ body {
 }
 
 .footer__head .footer__head_flex .feature .feature__text__head {
+  font-weight: 400;
   font-size: 19.96px;
   line-height: 24px;
   color: #FBFBFB;
@@ -375,6 +398,7 @@ body {
   line-height: 17px;
   text-align: center;
   color: #FBFBFB;
+  font-family: 'lato-light';
 }
 
 .footer__center {
@@ -454,6 +478,7 @@ body {
   border: none;
   color: white;
   text-align: center;
+  cursor: pointer;
 }
 
 .footer__protect {
@@ -560,6 +585,7 @@ body {
   line-height: 17px;
   color: #000000;
   padding-left: 16px;
+  text-decoration: none;
 }
 
 .filter__flex .fast__filter__flex {

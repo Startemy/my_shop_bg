@@ -3,10 +3,27 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face {
+    font-family: 'lato-light';
+    src: url(fonts/Lato/Lato-Light.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'lato-regular';
+    src: url(fonts/Lato/Lato-Regular.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'lato-bold';
+    src: url(fonts/Lato/Lato-Bold.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
 
 body{
-    font-family: sans-serif;
-    font-style: normal;
+    font-family: 'lato-regular';
 }
 .container{
     max-width: 1160px;
@@ -122,10 +139,11 @@ body{
         color: #FFFFFF;
     }
     .acces{
-        width: 28%;
+        width: 25%;
     }
     .for{
         text-transform: uppercase;
+        font-family: 'lato-bold';
         font-size: 24px;
         line-height: 29px;
         text-align: center;
@@ -186,6 +204,7 @@ body{
         line-height: 17px;
         color: #5D5D5D;
         margin: 13px 0 18px 0;
+        font-family: 'lato-light';
     }
     .price{
         font-size: 16px;
@@ -276,6 +295,7 @@ body{
         .feature{
             max-width: 360px;
             .feature__text__head{
+                font-weight: 400;
                 font-size: 19.96px;
                 line-height: 24px;
                 color: #FBFBFB;
@@ -288,6 +308,7 @@ body{
                 line-height: 17px;
                 text-align: center;
                 color: #FBFBFB;
+                font-family: 'lato-light';
             }
         }
     }
@@ -355,6 +376,7 @@ body{
             border: none;
             color:white;
             text-align: center;
+            cursor: pointer;
         }
     }
 }
@@ -433,6 +455,7 @@ body{
         line-height: 17px;
         color: #000000;
         padding-left: 16px;
+        text-decoration: none;
     }
     .fast__filter__flex{
         display: flex;

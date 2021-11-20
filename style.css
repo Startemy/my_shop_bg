@@ -323,25 +323,19 @@ body {
 
 .bottom_cont_prod {
   margin: 48px auto 95px auto;
-  width: 215px;
-  height: 48px;
-  border: 1px solid #F16D7F;
-  background: transparent;
 }
 
-.bottom_cont_prod p {
+.bottom_cont_prod .btm__catlog__prod {
+  color: #F26376;
+  border: 1px solid #F16D7F;
+  padding: 14px 38px;
   font-size: 16px;
   line-height: 19px;
-  color: #F26376;
-  margin: 15px 37px;
   text-decoration: none;
 }
 
-.bottom_cont_prod:hover {
-  background: #F16D7F;
-}
-
-.bottom_cont_prod:hover p {
+.bottom_cont_prod:hover .btm__catlog__prod {
+  background-color: #F16D7F;
   color: white;
 }
 

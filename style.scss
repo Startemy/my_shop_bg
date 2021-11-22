@@ -3,27 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-@font-face {
-    font-family: 'lato-light';
-    src: url(fonts/Lato/Lato-Light.ttf);
-    font-style: normal;
-    font-weight: normal;
-}
-@font-face {
-    font-family: 'lato-regular';
-    src: url(fonts/Lato/Lato-Regular.ttf);
-    font-style: normal;
-    font-weight: normal;
-}
-@font-face {
-    font-family: 'lato-bold';
-    src: url(fonts/Lato/Lato-Bold.ttf);
-    font-style: normal;
-    font-weight: normal;
-}
 
 body{
-    font-family: 'lato-regular';
+    font-family: 'Lato', sans-serif;
 }
 .container{
     max-width: 1160px;
@@ -143,7 +125,7 @@ body{
     }
     .for{
         text-transform: uppercase;
-        font-family: 'lato-bold';
+        font-weight: bold;
         font-size: 24px;
         line-height: 29px;
         text-align: center;
@@ -204,7 +186,6 @@ body{
         line-height: 17px;
         color: #5D5D5D;
         margin: 13px 0 18px 0;
-        font-family: 'lato-light';
     }
     .price{
         font-size: 16px;
@@ -308,7 +289,6 @@ body{
                 line-height: 17px;
                 text-align: center;
                 color: #FBFBFB;
-                font-family: 'lato-light';
             }
         }
     }
@@ -401,6 +381,12 @@ body{
                 height: 32px;
                 background: white;
                 list-style: none;
+                .img__social{
+                    margin-top: 3px;
+                }
+                .face{      //fontawesome
+                    color: black;
+                }
             }
             .social:not(:last-child){
                 margin-right: 7px;
@@ -409,11 +395,22 @@ body{
                 background-color: #F16D7F;
             }
             .social:hover .img__social{
-                fill:white; 
+                fill:rgb(255, 255, 255); 
+            }
+            .social:active .img__social{
+                fill:rgb(69, 255, 230);
+            }
+
+            .social:hover .face{        //fontawesome
+                color:rgb(255, 255, 255); 
+            }
+            .social :active .face{      //fontawesome
+                color:rgb(69, 255, 230);
             }
         }
     }
 }
+
 
 
 ///////////////CATALOG///////////////////////
@@ -457,16 +454,24 @@ body{
         padding-left: 16px;
         text-decoration: none;
     }
+    .filter::after{
+        content: url('image/icons/burger_filter.svg');
+        margin-left: 11px;
+    }
     .fast__filter__flex{
         display: flex;
         li{
             list-style: none;
         }
-        a{
+        .fast__filter__des{
             text-decoration: none;
             font-size: 14px;
             line-height: 17px;
             color: #6F6E6E;
+        }
+        .fast__filter__des::after{
+            content: url('image/icons/strelca_vipad_menu.svg');
+            margin-left: 10px;
         }
     }
 }

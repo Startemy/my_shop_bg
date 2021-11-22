@@ -5,29 +5,8 @@
           box-sizing: border-box;
 }
 
-@font-face {
-  font-family: 'lato-light';
-  src: url(fonts/Lato/Lato-Light.ttf);
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'lato-regular';
-  src: url(fonts/Lato/Lato-Regular.ttf);
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'lato-bold';
-  src: url(fonts/Lato/Lato-Bold.ttf);
-  font-style: normal;
-  font-weight: normal;
-}
-
 body {
-  font-family: 'lato-regular';
+  font-family: 'Lato', sans-serif;
 }
 
 .container {
@@ -204,7 +183,7 @@ body {
 
 .fast__menu__flex .for {
   text-transform: uppercase;
-  font-family: 'lato-bold';
+  font-weight: bold;
   font-size: 24px;
   line-height: 29px;
   text-align: center;
@@ -274,7 +253,6 @@ body {
   line-height: 17px;
   color: #5D5D5D;
   margin: 13px 0 18px 0;
-  font-family: 'lato-light';
 }
 
 .product__desc .price {
@@ -398,7 +376,6 @@ body {
   line-height: 17px;
   text-align: center;
   color: #FBFBFB;
-  font-family: 'lato-light';
 }
 
 .footer__center {
@@ -520,6 +497,14 @@ body {
   list-style: none;
 }
 
+.footer__protect .footer__protect__flex .social__box .social .img__social {
+  margin-top: 3px;
+}
+
+.footer__protect .footer__protect__flex .social__box .social .face {
+  color: black;
+}
+
 .footer__protect .footer__protect__flex .social__box .social:not(:last-child) {
   margin-right: 7px;
 }
@@ -530,6 +515,18 @@ body {
 
 .footer__protect .footer__protect__flex .social__box .social:hover .img__social {
   fill: white;
+}
+
+.footer__protect .footer__protect__flex .social__box .social:active .img__social {
+  fill: #45ffe6;
+}
+
+.footer__protect .footer__protect__flex .social__box .social:hover .face {
+  color: white;
+}
+
+.footer__protect .footer__protect__flex .social__box .social :active .face {
+  color: #45ffe6;
 }
 
 .page__title {
@@ -588,6 +585,11 @@ body {
   text-decoration: none;
 }
 
+.filter__flex .filter::after {
+  content: url("image/icons/burger_filter.svg");
+  margin-left: 11px;
+}
+
 .filter__flex .fast__filter__flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -598,11 +600,16 @@ body {
   list-style: none;
 }
 
-.filter__flex .fast__filter__flex a {
+.filter__flex .fast__filter__flex .fast__filter__des {
   text-decoration: none;
   font-size: 14px;
   line-height: 17px;
   color: #6F6E6E;
+}
+
+.filter__flex .fast__filter__flex .fast__filter__des::after {
+  content: url("image/icons/strelca_vipad_menu.svg");
+  margin-left: 10px;
 }
 
 .fast__filter__flex li:not(:last-child) {

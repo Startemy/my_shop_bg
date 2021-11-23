@@ -13,11 +13,9 @@
     <title>BrandShop Catalog</title>
 </head>
 
-
-
 <body>
     <header class="head">
-        <section class="container ">
+        <section id="header" class="container ">
             <nav class="head__flex">
                 <ul class="head__left__flex">
                     <li class="nostyle logo"><a href="index.html"><img src="image/head/logo.png" alt="logo"></a></li>
@@ -29,7 +27,7 @@
                     <li class="nostyle right__item"><a href="#"><img src="image/head/login_logo.svg"
                                 alt="login_logo"></a>
                     </li>
-                    <li class="nostyle right__item quantity__cart"><a href="#">
+                    <li class="nostyle right__item quantity__cart"><a href="cart.html">
                             <img src="image/head/cart_logo.svg" alt="cart_logo">
                             <div class="quantity">5</div>
                         </a>
@@ -39,14 +37,14 @@
         </section>
     </header>
 
-    <section class="page__title ">
+    <section id="page_title" class="page__title ">
         <div class="page__title__flex container">
             <p class="title">NEW ARRIVALS </p>
             <div><a href="index.html">HOME /</a> <a href="#"> MEN /</a> <a href="#">NEW ARRIVALS </a></div>
             <!--Разобрать как вывести тектс иерархии от корня-->
         </div>
     </section>
-    <section class="container products">
+    <section id="catalog_wth_filters" class="container products">
         <div class="filter__flex">
             <a href="#" class="filter">FILTER</a>
             <ul class="fast__filter__flex">
@@ -242,7 +240,7 @@
     </section>
 
     <div class="footer">
-        <section class="footer__head">
+        <section id="top_footer" class="footer__head">
             <div class="footer__head_flex container">
                 <div class="feature"><img src="image/Feature/delivery_logo.svg" alt="delivery">
                     <h3 class="feature__text__head">Free Delivery</h3>
@@ -262,7 +260,7 @@
                 </div>
             </div>
         </section>
-        <section class="footer__center">
+        <section id="middle_footer" class="footer__center">
             <div class="footer__center__flex container">
                 <div class="intersec">
                     <img class="round" src="image/Round_wom.jpg" alt="round">
@@ -281,7 +279,7 @@
                 </div>
             </div>
         </section>
-        <section class="footer__protect">
+        <section id="botom_footer" class="footer__protect">
             <div class="footer__protect__flex container">
                 <p style="color: white;">&copy; 2021 Brand All Rights Reserved.</p>
                 <ul class="social__box">

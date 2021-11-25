@@ -1,0 +1,207 @@
+//////////////Секция Билбор///////////
+.billboard{
+    background-color: #F1E4E6;
+    height: 764px;
+    &__flex{
+        @include alignment(flex-end,center);
+        height: 100%;
+        background: url('../image/man_on_head.png') no-repeat -216px;
+    }
+    &__title{
+        max-width: 420px;
+        border-left: 12px solid #F16D7F;
+        padding-left: 16px;
+        & h1{
+            font-weight: 900;
+            font-size: 48px;
+            line-height: 40px;
+        }
+        & span{
+            font-weight: bold;
+            font-size: 32px;
+            line-height: 38px;
+        }
+        &__fashion {
+            color: #F16D7F;
+        }
+    }
+}
+
+//////////////Секция Акции/////////////
+.stocks{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 65px;
+    margin-bottom: 96px;
+    & a{
+        &:not(:last-child){
+        @include alignment(center,center);
+        width: 360px;
+        height: 260px;
+        position: relative;
+        background-size: cover;
+        }
+    }
+    & a{
+        @include alignment(center,center);
+        width: 100%;
+        height: 180px;
+        text-decoration: none;
+        position: relative;
+        background-size: cover;
+    }
+    & a{
+        &::before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color:#211616;
+        opacity: 0.7;
+        }
+    }
+    &__fw{
+        background-image: url('../image/fast_menu/for_women.jpg');
+        }
+    &__fm{
+    background-image: url('../image/fast_menu/for_men.jpg');
+    }
+    &__fk{
+        background-image: url('../image/fast_menu/for_kids.jpg');
+    }
+    &__ac{
+        background-image: url('../image/fast_menu/accesorise.jpg');
+        &__text{
+            width: 25%;
+        }
+    }
+    & p{
+        width: 50%;
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        color: #FFFFFF;
+        position: absolute;
+    }
+    & span{
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        color: #F16D7F;
+    }
+}
+
+//////////////Секция Предложения///////
+.proposal{
+    @include alignment(center, center);
+    flex-direction: column;
+    &__heading{
+        font-size: 30px;
+        line-height: 36px;
+        color: #222222;
+    }
+    &__prgf{
+        font-size: 14px;
+        line-height: 17px;
+        color: #9F9F9F;
+        margin-bottom: 48px;
+    }
+    &__boxcard{
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+    &__card{
+        width: 360px;
+        height: 581px;
+        
+        //--------появляющееся затемнение с кнпкой корзина----------//
+        &__img{
+            position: relative;
+            .overlay{           //темный слой
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.0);
+                transition: 0.2s ease;
+            }
+            .proposal__btm-cart{ //Кнопка продукта добавить в корзину
+                @include alignment(center, center);
+                text-decoration: none;
+                visibility: hidden;
+                width: 139px;
+                height: 44px;
+                border: 1px solid white;
+                background-color: transparent;
+                position: absolute;
+                top:45%;
+                left: 33%;
+            }
+            .btm-cart__img{
+                width: 26px;
+                margin-right: 11px;
+            }
+            & p{
+                font-size: 14px;
+                line-height: 17px;
+                color: #FFFFFF;
+            }
+            &:hover .overlay { ////наведение на крточку
+                display: block;
+                background: rgba(0, 0, 0, 0.7);
+            }
+            &:hover a{ ///появление кнопки корзина при наведении на крточку
+                visibility: visible;
+            }
+        }
+    }
+
+    //-----------Описание продукта--------------//
+    &__desc-product{
+    padding: 25px 29px 20px 16px;
+    text-align: left;
+        & h2{
+            font-size: 13px;
+            line-height: 16px;
+            color: #000000;
+        }
+        & p{
+            @include font-desc(normal,#5D5D5D);
+            margin: 13px 0 18px 0;
+        }
+        & strong{
+            font-size: 16px;
+            line-height: 19px;
+            color: #F16D7F;
+        }
+    }
+    
+    //--------Кнопка Смотреть все продукты---------------//
+    &__btm-catalog{
+        margin: 48px auto 95px auto;
+
+        &:hover .proposal__btm-cat{
+            background-color: #F16D7F;
+            color: white;
+        }
+    }
+    &__btm-cat{
+        color: #F26376;
+        border: 1px solid #F16D7F;
+        padding: 14px 38px;
+        font-size: 16px;
+        line-height: 19px;
+        text-decoration: none;
+    }
+}
+
+
+
+
+
+
+

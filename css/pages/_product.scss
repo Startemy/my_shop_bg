@@ -1,0 +1,130 @@
+
+//////////////PAGE PRODUCT/////////
+//------------Слайд-------------//
+.slide{
+    @include alignment(center,center);
+    max-width: 1600px;
+    margin: 0 auto;
+    position: relative;
+    &__img{
+        max-width: 100%;
+
+    }
+    &__arrow{
+        @include alignment(center,center);
+        width: 47px;
+        height: 47px;
+        background-color: rgba(0, 0, 0, 0.2);
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        &__style{
+            fill: black;
+        }
+        &--left{
+            position: absolute;
+            top: 45%;
+            left: 0;
+        }
+        &--right{
+            position: absolute;
+            top: 45%;
+            left:96.9%;
+        }
+        &:hover .slide__arrow__style{
+            fill: #F16D7F;
+        }
+    }
+}
+
+//--------Описание товара------------//
+.desc-prod{  ///Ждать урока как сделать без position
+    margin-top: -60px;
+    position: relative;
+    &__box{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border: 1px solid #EAEAEA;
+        background-color: white;
+        & h1{
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;
+            color: #F16D7F;
+            margin: 64px 0 12px 0;
+        }
+        & h2{         
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 22px;
+            color: #4D4D4D;
+            margin: 12px 0 48px 0;
+        }
+        & p{
+            @include font-desc(300,#5E5E5E);
+            max-width: 565px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        & strong{
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 29px;
+            color: #EF5B70;
+            margin: 32px 0 64px 0;
+        }
+        & ul{
+            margin: 64px 0 48px 0;
+        }
+    }
+    &__red-line{
+        border: 1.5px solid #EF5B70;
+        background-color:#EF5B70 ;
+        width: 63px;
+    }
+    &__grey-line{
+        border: 1px solid #EAEAEA;
+        background-color: #EAEAEA;
+        width: 642px;
+    }
+    &__btm-cart{      //Кнопка продукта добавить в корзину
+        @include alignment(center,center);
+        text-decoration: none;
+        width: 212px;
+        height: 48px;
+        border: 1px solid #EF5B70;
+        background-color: transparent;
+        margin-bottom: 64px;
+    }
+    &__btm-img{
+        width: 26px;
+        margin-right: 22px;
+        fill: #EF5B70;
+    }
+    &__text{
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: #F26376;
+    }
+    &__btm-cart{
+        &:hover{
+        background-color: #EF5B70;
+    }
+    }   
+    &__btm-cart{
+        &:hover .desc-prod__btm-img {
+        fill: white;
+    }
+    }      
+    &__btm-cart{
+        &:hover .desc-prod__text {
+        color: white;
+    }
+    }
+}
+.products-card{   ////Отступы для proposal
+    margin-top: 128px;
+    margin-bottom: 128px;
+}

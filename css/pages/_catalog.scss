@@ -1,0 +1,70 @@
+///////////////CATALOG///////////////////////
+.page-title{
+    background: #F8F3F4;
+    
+    &__heading{
+    min-height: 148px;
+    @include alignment(space-between, center);
+        & p{
+            font-size: 24px;
+            line-height: 29px;
+            color: #F16D7F;
+        }
+        & a{
+            text-decoration: none;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 17px;
+            color: #636363;
+        }
+    }
+}
+//--------------секция фильтров----------------//
+.filter{
+@include alignment(center,center);
+    margin: 51px 0 64px 0;
+    position: relative;
+    & a{
+        position: absolute;
+        left: 0%;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: #000000;
+        padding-left: 16px;
+        text-decoration: none;
+    }
+    & a::after{
+        content: url('../image/icons/burger_filter.svg');
+        margin-left: 11px;
+    }
+
+    &__fast{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & li{
+            list-style: none;
+        }
+        & a{
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 17px;
+            color: #6F6E6E;
+            position: relative;
+        }
+        & a::after{
+            content: url('../image/icons//arrow_botm_menu.svg');
+            margin-left: 10px;
+        }
+        & li:not(:last-child){
+            margin-right: 28px;
+        }
+    }
+
+}
+//--------------Пагинация---------------//
+.pagination{ ///// Сделать првильно
+    margin: 48px 0 96px 0;
+}
+////////---------------------------///////////

@@ -1,0 +1,46 @@
+//Голова//
+.header{
+    background-color: #222222;
+    &__flex{
+        @include alignment(space-between, center);
+        padding: 19px 10px;
+    }
+    &__leftpart{
+        @include alignment(none, center);
+        li{
+            list-style: none;
+        }
+        .leftpart-logo-mrg{
+            margin-right: 41px;
+        }
+    }
+    &__rightpart{
+        @include alignment(none, center);
+        li{
+            list-style: none;
+        }
+    }  
+    &__rightpart-mrg{
+        &:not(:last-child){
+        margin-right: 33px;
+        }
+    }
+    .rightpart__quantity-pos{
+        position: relative;
+        .rightpart__quantity-mrg{
+            top: -20%;
+            left: 75%;
+            position: absolute;
+            @include alignment(center, center);
+        }
+        .rightpart__quantity-view{
+            width: 19px;
+            height: 19px;
+            border-radius: 200px; 
+            background:#F16D7F;;
+            font-size: 12px;
+            line-height: 14px;
+            color: #FFFFFF;
+        }
+    }  
+}

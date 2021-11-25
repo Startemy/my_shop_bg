@@ -1,0 +1,31 @@
+@import 'modules/mixin';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+.container{
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.main{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    &__grow{
+        flex-grow: 1;
+    }
+}
+
+@import 'section/header';
+@import 'pages/index';
+@import 'pages/catalog';
+@import 'pages/product';
+@import 'pages/cart';
+@import 'section/footer';

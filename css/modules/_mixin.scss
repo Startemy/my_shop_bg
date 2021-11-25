@@ -1,0 +1,11 @@
+@mixin alignment($jc,$ai) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+@mixin font-desc($weight,$color) {
+    font-size: 14px;
+    font-weight: $weight;
+    line-height: 17px;
+    color: $color
+}

@@ -18,16 +18,25 @@
             color: #636363;
         }
     }
+    &__crumbs{
+        & a:nth-last-child(1){
+            color:#F16D7F;
+    }
+    }
 }
 //--------------секция фильтров----------------//
+.filter-box{
+    min-height: 132px;
+    @include alignment(center,center);
+    position: relative;
+}
 .filter{
-@include alignment(center,center);
+height: 100%;
     & summary,li{
         list-style: none;  
     }
-    margin: 51px 0 64px 0;
-    position: relative;
-    &__list{
+    ////////Фильтр продуктов/////////////
+    & details{
         font-weight: 600;
         font-size: 14px;
         line-height: 17px;
@@ -35,50 +44,35 @@
         text-decoration: none;
         background-color: white;
         outline: none;
-        &[open]{
-            box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
-        }
-        &[open] .filter__head{
+        &[open] .filter__title{
             color: #EF5B70;
         }
-        &[open] .filter__burger{
+        &[open] .filter__title svg{
             fill: #EF5B70;
         }
-        &_space{
-            padding-left: 16px;
-            width: 360px;
-            position: absolute;
-            z-index: 1;
-            left: 0%;
-            top: 0%;
+    }
+    &__space{
+        padding-left: 16px;
+        padding-top: 13px;
+        width: 360px;
+        position: absolute;
+        z-index: 1;
+        left: 0%;
+        top: 33%;
+        &[open]{
+            box-shadow: 6px 4px 35px rgba(0, 4, 4, 0.25);
+            box-sizing: inherit;
         }
     }
-    &__head{
+    &__title{
         cursor: pointer;
-        padding-top: 13px;
-    }
-    &__burger{
-        margin-left: 11px;
-    }
-    &__menu{
-        font-size: 14px;
-        line-height: 17px;
-        color: #EF5B70;
-        font-weight:normal;
-        display: block;
-        outline: none;
-        cursor: pointer;
-
-        &--space{
-            margin-top: 24px;
-            border-left: 10px solid #EF5B70;
-            border-bottom: 1px solid #EBEBEB;
-            padding: 10px;
-            margin-bottom: 24px;
+        & svg{        
+            margin-left: 11px;
         }
     }
     &__content{
-        &--mrg{
+        margin-right: 19px;
+        & li{
             margin-left: 20px;
             padding-bottom: 16px;
         }
@@ -89,40 +83,90 @@
             line-height: 17px;
             color: #6F6E6E;
         }
+        & summary{
+            font-size: 14px;
+            line-height: 17px;
+            color: #EF5B70;
+            font-weight:normal;
+            display: block;
+            outline: none;
+            cursor: pointer;
+    }
+        &--space{
+            margin-top: 24px;
+            border-left: 10px solid #EF5B70;
+            border-bottom: 1px solid #EBEBEB;
+            padding: 10px;
+            margin-bottom: 24px;
+        }
     }
     &__content:not(:last-child){
         margin-bottom: 11px;
     }
 
-
-
-    &__fast{
+    
+    ////Фильтр по данным продукта///////////////
+    &__exception{
         @include alignment(center,center);
-        &_flex{
-            @include alignment(center,center);
-        }
-        & li{
-            list-style: none;
-        }
-        & a{
-            text-decoration: none;
-            font-size: 14px;
-            line-height: 17px;
-            color: #6F6E6E;
-            position: relative;
-        }
-        & a::after{
-            content: url('../image/icons//arrow_botm_menu.svg');
-            margin-left: 10px;
-        }
-        & li:not(:last-child){
+        & h2:not(:last-child){
             margin-right: 28px;
         }
     }
-
+    &__exception-flex{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        & h2{
+            list-style: none;
+            font-size: 14px;
+            line-height: 17px;
+            color: #6F6E6E;
+            cursor: pointer;
+            &::after{
+                content: url('../image/icons//arrow_botm_menu.svg');
+                margin-left: 10px;
+            }
+        }
+        & h2:hover + ul{
+            visibility: visible;
+        }
+        & ul{
+            visibility: hidden;
+            width: 100%;
+            border: 1px solid white;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 16px;
+            color: #6F6E6E;
+            position: absolute;
+            //top: 100%;
+            //right: 6px;
+            z-index: 1;
+            &:hover{
+                visibility: visible;
+            }
+            & li{
+                list-style: none;
+            }
+        }
+        &--space{
+            top: 100%;
+            right: 6px;
+        }
+        & label{
+            margin: 6px 30px 6px 6px;
+            display: flex;
+            align-items: center;
+        }
+        & input{
+            margin-right: 9px;
+        }
+    }
 }
 //--------------Пагинация---------------//
 .pagination{ ///// Сделать првильно
     margin: 48px 0 96px 0;
 }
-////////---------------------------///////////

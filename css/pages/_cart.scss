@@ -14,13 +14,14 @@
         & img{
             max-width: 262px;
         }
-        &_mrg{
-        @include alignment(space-between,none);
-        margin-bottom: 72px;
+        &--mrg{
+            @include alignment(space-between,none);
+            margin-bottom: 40px;
         }
     }
+
     &__list-desc{
-        &_mrg{
+        &--mrg{
             margin: 22px 97px 64px 31px;
         }
         & h2{
@@ -50,7 +51,7 @@
             &::-webkit-inner-spin-button {
                 -webkit-appearance: none;
             }
-            &_mrg{
+            &--mrg{
                 margin-left: 24px;
             }
         }
@@ -62,7 +63,7 @@
         & img{
             width: 18px;
         }
-        &_mrg{
+        &--mrg{
             display: flex;
             align-items: flex-start;
             margin: 28px 22px 260px 0;
@@ -70,6 +71,7 @@
     }
     
     &__list-btnbox{
+        padding-top: 32px;
         display: flex;
         justify-content: space-between;
     }
@@ -81,9 +83,19 @@
         line-height: 17px;
         color: #000000;
         cursor: pointer;
-        &_size{
+        &--size{
             width: 235px;
             height: 50px;
+        }
+        &--size-ship{
+            margin-top: 13px;
+            width: 100px;
+            height: 35px;
+        }
+        &--font{
+            font-size: 11px;
+            line-height: 13px;
+            color: #4A4A4A;
         }
     }
     /////Form Shipping//////
@@ -118,16 +130,6 @@
             &::-webkit-inner-spin-button {
                 -webkit-appearance: none; 
             }
-        }
-        .cart__btn_size{
-            margin-top: 13px;
-            width: 100px;
-            height: 35px;
-        }
-        .cart__btn_font{
-            font-size: 11px;
-            line-height: 13px;
-            color: #4A4A4A;
         }   
     }
     &__total-pricebox{

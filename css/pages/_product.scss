@@ -54,7 +54,7 @@
             color: #F16D7F;
             margin: 64px 0 12px 0;
         }
-        & h2{         
+        & h3{         
             font-weight: 300;
             font-size: 18px;
             line-height: 22px;
@@ -74,9 +74,6 @@
             color: #EF5B70;
             margin: 32px 0 64px 0;
         }
-        & ul{
-            margin: 64px 0 48px 0;
-        }
     }
     &__red-line{
         border: 1.5px solid #EF5B70;
@@ -87,6 +84,7 @@
         border: 1px solid #EAEAEA;
         background-color: #EAEAEA;
         width: 642px;
+        margin-bottom: 64px
     }
     &__btm-cart{      //Кнопка продукта добавить в корзину
         @include alignment(center,center);
@@ -96,6 +94,7 @@
         border: 1px solid #EF5B70;
         background-color: transparent;
         margin-bottom: 64px;
+        margin-top: 48px;
     }
     &__btm-img{
         width: 26px;

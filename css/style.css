@@ -882,7 +882,7 @@ body {
   margin-bottom: 128px;
 }
 
-.cart__list-size {
+.cart__list {
   max-width: 650px;
 }
 
@@ -910,57 +910,10 @@ body {
   margin-bottom: 40px;
 }
 
-.cart__list-desc--mrg {
-  margin: 22px 97px 64px 31px;
-}
-
-.cart__list-desc h2 {
-  font-size: 24px;
-  line-height: 29px;
-  color: #222222;
-  margin-bottom: 42px;
-  max-width: 210px;
-}
-
-.cart__list-desc p {
-  font-size: 22px;
-  line-height: 35px;
-  color: #575757;
-}
-
-.cart__list-desc_color-price {
-  color: #F16D7F;
-}
-
-.cart__list-desc__quantity {
-  width: 44px;
-  text-align: center;
-  outline: none;
-  border: 1px solid #EAEAEA;
-  font-size: 18px;
-  line-height: 22px;
-  color: #656565;
-}
-
-.cart__list-desc__quantity::-webkit-outer-spin-button, .cart__list-desc__quantity::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
-
-.cart__list-desc__quantity--mrg {
-  margin-left: 24px;
-}
-
-.cart__remove {
+.cart__list-card button {
   border: none;
   background: none;
   cursor: pointer;
-}
-
-.cart__remove img {
-  width: 18px;
-}
-
-.cart__remove--mrg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -968,6 +921,47 @@ body {
       -ms-flex-align: start;
           align-items: flex-start;
   margin: 28px 22px 260px 0;
+}
+
+.cart__list-card button > img {
+  width: 18px;
+}
+
+.cart__list-desc--mrg {
+  margin: 22px 97px 64px 31px;
+}
+
+.cart__list-desc > h2 {
+  font-size: 24px;
+  line-height: 29px;
+  color: #222222;
+  margin-bottom: 42px;
+  max-width: 210px;
+}
+
+.cart__list-desc > p {
+  font-size: 22px;
+  line-height: 35px;
+  color: #575757;
+}
+
+.cart__list-desc > p .color-price {
+  color: #F16D7F;
+}
+
+.cart__list-desc > p > input {
+  width: 44px;
+  text-align: center;
+  outline: none;
+  border: 1px solid #EAEAEA;
+  font-size: 18px;
+  line-height: 22px;
+  color: #656565;
+  margin-left: 24px;
+}
+
+.cart__list-desc > p > input::-webkit-outer-spin-button, .cart__list-desc > p > input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 
 .cart__list-btnbox {

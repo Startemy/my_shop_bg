@@ -60,7 +60,7 @@
     <main class="main">
         <section class="main__grow">
             <section id="CART" class="cart container">
-                <div class="cart__list-size">
+                <section class="cart__list">
                     <div class="cart__list-card cart__list-card--mrg">
                         <a href="prоduct.html">
                             <img class="cart__list__img" src="image/orders/for_man/man_shirt.png" alt="product_4">
@@ -68,24 +68,24 @@
                         <div class="cart__list-desc cart__list-desc--mrg">
                             <h2>MANGO PEOPLE T-SHIRT</h2>
                             <p>Price:
-                                <span class="cart__list-desc_color-price">$2954.00</span>
+                                <span class="color-price">$2954.00</span>
                             </p>
                             <p>Colore:
-                                <span class="cart__list-desc_color">blue</span>
+                                <span>blue</span>
                             </p>
                             <p>Size:
-                                <span class="cart__list-desc_size">XL</span>
+                                <span>XL</span>
                             </p>
                             <p>Quantity:
-                                <input class="cart__list-desc__quantity cart__list-desc__quantity--mrg" type="number"
-                                    min="1" max="10" name="quantity__cart" value="1"></input>
+                                <input type="number" min="1" max="10" name="quantity__cart" value="1"></input>
                             </p>
                         </div>
                         <!--Кнопку удалить товар лучше позишном или мерджином-->
-                        <button class="cart__remove cart__remove--mrg">
+                        <button>
                             <img src="image/icons/X.svg" alt="close">
                         </button>
                     </div>
+
                     <div class="cart__list-card cart__list-card--mrg">
                         <a href="prоduct.html">
                             <img class="cart__list__img" src="image/orders/for_man/green_shirt.png" alt="product_4">
@@ -93,21 +93,20 @@
                         <div class="cart__list-desc cart__list-desc--mrg">
                             <h2>MANGO PEOPLE T-SHIRT</h2>
                             <p>Price:
-                                <span class="cart__list-desc--color-price">$2954.00</span>
+                                <span class="color-price">$2954.00</span>
                             </p>
                             <p>Colore:
-                                <span class="cart__list-desc--color">blue</span>
+                                <span>blue</span>
                             </p>
                             <p>Size:
-                                <span class="cart__list-desc--size">XL</span>
+                                <span>XL</span>
                             </p>
                             <p>Quantity:
-                                <input class="cart__list-desc__quantity cart__list-desc__quantity--mrg" type="number"
-                                    min="1" max="10" name="quantity__cart" value="1"></input>
+                                <input type="number" min="1" max="10" name="quantity__cart" value="1"></input>
                             </p>
                         </div>
                         <!--Кнопку удалить товар лучше позишном или мерджином-->
-                        <button class="cart__remove cart__remove--mrg">
+                        <button>
                             <img src="image/icons/X.svg" alt="close">
                         </button>
                     </div>
@@ -115,16 +114,16 @@
                         <button class="cart__btn cart__btn--size">CLEAR SHOPPING CART</button>
                         <button class="cart__btn cart__btn--size">CONTINUE SHOPPING</button>
                     </div>
-                </div>
+                </section>
                 <section id="shipping-form">
                     <form class="cart__shipping" action="#">
                         <h2>SHIPPING ADRESS</h2>
                         <input type="text" placeholder="Bangladesh">
                         <input type="text" placeholder="State">
                         <input type="number" placeholder="Postcode/Zip">
-                        <div class="cart__shipping__btnbox">
+                        <form>
                             <button class="cart__btn cart__btn--size-ship cart__btn--font">GET A QUOTE</button>
-                        </div>
+                        </form>
                         <div class="cart__total-pricebox">
                             <div class="cart__total-price">
                                 <p class="total-price-sub total-price-sub_mrg">SUB TOTAL<span

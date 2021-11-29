@@ -4,71 +4,71 @@
     @include alignment(space-between,none);
     flex-wrap: wrap;
     margin-bottom: 128px;
-    &__list-size{
+
+    &__list{
         max-width: 650px;
     }
+
     &__list-card{
         box-shadow: 17px 19px 24px rgba(0,0,0,0.2);
         width: 652px;
         height: 306px; 
+
         & img{
             max-width: 262px;
         }
+
         &--mrg{
             @include alignment(space-between,none);
             margin-bottom: 40px;
         }
-    }
 
+        & button{
+            border: none;
+            background: none;
+            cursor: pointer;
+            display: flex;
+            align-items: flex-start;
+            margin: 28px 22px 260px 0;
+            & > img{
+                width: 18px;
+            }
+        }
+    }
     &__list-desc{
         &--mrg{
             margin: 22px 97px 64px 31px;
         }
-        & h2{
+        & > h2{
             font-size: 24px;
             line-height: 29px;
             color: #222222;
             margin-bottom: 42px;
             max-width: 210px;
         }
-        & p{
+        & > p{
             font-size: 22px;
             line-height: 35px;
             color: #575757;
-        }
-        &_color-price{
-            color: $brand-color;
-        }
-        &__quantity{
-            width: 44px;
-            text-align: center;
-            outline: none;
-            border: 1px solid #EAEAEA;
-            font-size: 18px;
-            line-height: 22px;
-            color: #656565;
-            &::-webkit-outer-spin-button, ///убираем стрелочки из input number
-            &::-webkit-inner-spin-button {
-                -webkit-appearance: none;
+            & .color-price{
+                color: $brand-color;
             }
-            &--mrg{
+            & > input{
+                width: 44px;
+                text-align: center;
+                outline: none;
+                border: 1px solid #EAEAEA;
+                font-size: 18px;
+                line-height: 22px;
+                color: #656565;
                 margin-left: 24px;
+                &::-webkit-outer-spin-button, ///убираем стрелочки из input number
+                &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                }
             }
         }
-    }
-    &__remove{
-        border: none;
-        background: none;
-        cursor: pointer;
-        & img{
-            width: 18px;
-        }
-        &--mrg{
-            display: flex;
-            align-items: flex-start;
-            margin: 28px 22px 260px 0;
-        }
-    }
+}
     
     &__list-btnbox{
         padding-top: 32px;
@@ -104,6 +104,7 @@
         flex-direction: column;
         //margin-left: 128px;
         margin-bottom: 57px;
+        
         & h2{
             font-weight: 300;
             font-size: 16px;

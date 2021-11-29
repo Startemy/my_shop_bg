@@ -32,7 +32,7 @@
             left:96.9%;
         }
         &:hover .slide__arrow__style{
-            fill: #F16D7F;
+            fill: $brand-color;
         }
     }
 }
@@ -51,7 +51,7 @@
             font-weight: 300;
             font-size: 14px;
             line-height: 17px;
-            color: #F16D7F;
+            color: $brand-color;
             margin: 64px 0 12px 0;
         }
         & h3{         
@@ -71,13 +71,13 @@
             font-weight: 300;
             font-size: 24px;
             line-height: 29px;
-            color: #EF5B70;
+            color: $brand-color;
             margin: 32px 0 64px 0;
         }
     }
     &__red-line{
-        border: 1.5px solid #EF5B70;
-        background-color:#EF5B70 ;
+        border: 1.5px solid $brand-color;
+        background-color: $brand-color;
         width: 63px;
     }
     &__grey-line{
@@ -91,7 +91,7 @@
         text-decoration: none;
         width: 212px;
         height: 48px;
-        border: 1px solid #EF5B70;
+        border: 1px solid $brand-color;
         background-color: transparent;
         margin-bottom: 64px;
         margin-top: 48px;
@@ -99,17 +99,17 @@
     &__btm-img{
         width: 26px;
         margin-right: 22px;
-        fill: #EF5B70;
+        fill: $brand-color;
     }
     &__text{
         font-weight: normal;
         font-size: 16px;
         line-height: 19px;
-        color: #F26376;
+        color: $brand-color;
     }
     &__btm-cart{
         &:hover{
-        background-color: #EF5B70;
+        background-color: $brand-color;
     }
     }   
     &__btm-cart{

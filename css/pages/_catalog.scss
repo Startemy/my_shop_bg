@@ -8,7 +8,7 @@
         & p{
             font-size: 24px;
             line-height: 29px;
-            color: #F16D7F;
+            color:$brand-color;
         }
         & a{
             text-decoration: none;
@@ -20,35 +20,35 @@
     }
     &__crumbs{
         & a:nth-last-child(1){
-            color:#F16D7F;
+            color:$brand-color;
     }
     }
 }
 //--------------секция фильтров----------------//
-.filter-box{
-    min-height: 132px;
-    @include alignment(center,center);
-    position: relative;
-}
 .filter{
 height: 100%;
+min-height: 132px;
+@include alignment(center,center);
+position: relative;
     & summary,li{
         list-style: none;  
     }
     ////////Фильтр продуктов/////////////
-    & details{
+    & > details{
         font-weight: 600;
         font-size: 14px;
         line-height: 17px;
         color: #000000;
         text-decoration: none;
-        background-color: white;
         outline: none;
         &[open] .filter__title{
-            color: #EF5B70;
+            color: $brand-color;
         }
         &[open] .filter__title svg{
-            fill: #EF5B70;
+            fill: $brand-color;
+        }
+        &[open]{
+            background-color: white;
         }
     }
     &__space{
@@ -86,18 +86,22 @@ height: 100%;
         & summary{
             font-size: 14px;
             line-height: 17px;
-            color: #EF5B70;
             font-weight:normal;
             display: block;
             outline: none;
             cursor: pointer;
-    }
+        }
         &--space{
             margin-top: 24px;
             border-left: 10px solid #EF5B70;
             border-bottom: 1px solid #EBEBEB;
             padding: 10px;
             margin-bottom: 24px;
+        }
+        & details{
+            &[open]{
+                color: $brand-color;
+            }
         }
     }
     &__content:not(:last-child){
@@ -122,6 +126,7 @@ height: 100%;
             line-height: 17px;
             color: #6F6E6E;
             cursor: pointer;
+            padding-bottom: 5px;
             &::after{
                 content: url('../image/icons//arrow_botm_menu.svg');
                 margin-left: 10px;
@@ -131,6 +136,7 @@ height: 100%;
             visibility: visible;
         }
         & ul{
+            box-shadow: 6px 4px 35px rgba(0, 4, 4, 0.25);
             visibility: hidden;
             width: 100%;
             border: 1px solid white;

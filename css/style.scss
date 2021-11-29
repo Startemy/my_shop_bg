@@ -1,5 +1,5 @@
 @import 'modules/mixin';
-
+$brand-color: #F16D7F;
 *{
     margin: 0;
     padding: 0;
@@ -15,7 +15,7 @@ body{
     padding: 0 10px;
 }
 .main{
-    min-height: 100vh;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     &__grow{

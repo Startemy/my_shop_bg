@@ -23,7 +23,7 @@
             line-height: 38px;
         }
         &__fashion {
-            color: #F16D7F;
+            color: $brand-color;
         }
     } 
 }
@@ -93,7 +93,7 @@
         font-weight: bold;
         font-size: 24px;
         line-height: 29px;
-        color: #F16D7F;
+        color: $brand-color;
     }
 }
 
@@ -101,42 +101,42 @@
 .proposal{
     @include alignment(center, center);
     flex-direction: column;
-    &__heading{
+    & h2{
         font-size: 30px;
         line-height: 36px;
         color: #222222;
     }
-    &__prgf{
+    & p{
         font-size: 14px;
         line-height: 17px;
         color: #9F9F9F;
         margin-bottom: 48px;
     }
-    &__boxcard{
+    & > section{
         display: flex;
         gap: 30px;
         flex-wrap: wrap;
+        & > div{
+            width: 360px;
+            height: 581px;
+        }
     }
-    &__card{
-        width: 360px;
-        height: 581px;
-        
-        //--------появляющееся затемнение с кнпкой корзина----------//
-        &__img{
-            position: relative;
-            .overlay{           //темный слой
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(0, 0, 0, 0.0);
-                transition: 0.2s ease;
-            }
-            .proposal__btm-cart{ //Кнопка продукта добавить в корзину
+    //--------Появляющееся затемнение с кнопкой корзина----------//
+    &__card-img{
+        position: relative;
+        & > div{           //темный слой
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.0);
+            transition: 0.2s ease;
+        }
+        & > form{ //Кнопка продукта добавить в корзину
+            visibility: hidden;
+            & > button{
                 @include alignment(center, center);
-                text-decoration: none;
-                visibility: hidden;
                 width: 139px;
                 height: 44px;
                 border: 1px solid white;
@@ -144,65 +144,68 @@
                 position: absolute;
                 top:45%;
                 left: 33%;
-            }
-            .btm-cart__img{
-                width: 26px;
-                margin-right: 11px;
-            }
-            & p{
-                font-size: 14px;
-                line-height: 17px;
-                color: #FFFFFF;
-            }
-            &:hover .overlay { ////наведение на крточку
-                display: block;
-                background: rgba(0, 0, 0, 0.7);
-            }
-            &:hover a{ ///появление кнопки корзина при наведении на крточку
-                visibility: visible;
+                cursor: pointer;
+                & > img{
+                    width: 26px;
+                    margin-right: 11px;
+                }
+                & > p{
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #FFFFFF;
+                    margin: 0 0 0 0;
+                }
             }
         }
+        &:hover div { ////наведение на крточку
+            display: block;
+            background: rgba(0, 0, 0, 0.7);
+        }
+        &:hover button{ ///появление кнопки корзина при наведении на крточку
+            visibility: visible;
+        }
     }
-
     //-----------Описание продукта--------------//
-    &__desc-product{
+    & article{
     padding: 25px 29px 20px 16px;
     text-align: left;
-        & h2{
+        & > h2{
             font-size: 13px;
             line-height: 16px;
             color: #000000;
         }
-        & p{
+        & > p{
             @include font-desc(normal,#5D5D5D);
             margin: 13px 0 18px 0;
         }
         & strong{
             font-size: 16px;
             line-height: 19px;
-            color: #F16D7F;
+            color:$brand-color;
         }
     }
     
     //--------Кнопка Смотреть все продукты---------------//
-    &__btm-catalog{
+    &__btn-catalog{
         margin: 48px auto 95px auto;
-
-        &:hover .proposal__btm-cat{
-            background-color: #F16D7F;
+        & a{
+            color: $brand-color;
+            border: 1px solid $brand-color;
+            padding: 14px 38px;
+            font-size: 16px;
+            line-height: 19px;
+            text-decoration: none;
+        }
+        &:hover a{
+            background-color: $brand-color;
             color: white;
         }
     }
-    &__btm-cat{
-        color: #F26376;
-        border: 1px solid #F16D7F;
-        padding: 14px 38px;
-        font-size: 16px;
-        line-height: 19px;
-        text-decoration: none;
+    &--mrg{
+        margin-top: 128px;
+        margin-bottom: 128px;
     }
 }
-
 
 
 

@@ -16,6 +16,7 @@
     }
     &__rightpart{
         @include alignment(none, center);
+        position: relative;
         li{
             list-style: none;
         }
@@ -25,19 +26,14 @@
         margin-right: 33px;
         }
     }
-    &__rightpart-menu-burger{
-        position: relative;
-    }
-
-
     ///////MENU//////////////////
     &__menu-box{
         min-width: 232px;
         min-height: 764px;
         position: absolute;
         background-color: white;
-        top: 53px;
-        left: 180px;
+        top: 56px;
+        left:165px;
         box-shadow: 0px 0px 26px 3px rgba(34, 60, 80, 0.2);
         & li{
             list-style: none;  
@@ -69,7 +65,6 @@
         color: #000000;
         margin: 37px 0 24px 34px;
     }
-
     .rightpart__quantity-pos{
         position: relative;
         .rightpart__quantity-mrg{

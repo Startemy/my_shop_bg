@@ -10,6 +10,12 @@
         max-width: 100%;
 
     }
+    .arrow{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        @include alignment(space-between,center);
+    }
     &__arrow{
         @include alignment(center,center);
         width: 47px;
@@ -20,16 +26,6 @@
         cursor: pointer;
         &__style{
             fill: black;
-        }
-        &--left{
-            position: absolute;
-            top: 45%;
-            left: 0;
-        }
-        &--right{
-            position: absolute;
-            top: 45%;
-            left:96.9%;
         }
         &:hover .slide__arrow__style{
             fill: $brand-color;

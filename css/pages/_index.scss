@@ -1,8 +1,38 @@
+@keyframes signboard {
+    0%{
+        transform: rotateX(0deg);
+    }
+    100%{
+        transform: rotateX(360deg);
+    }
+}
+@keyframes opacity-btn {
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+    
+}
+@keyframes card-shadow {
+    0%{
+        transform: scale(1);
+        box-shadow: 0px 0px 0px 0px rgba(34, 60, 80, 0.5);
+    }
+    100%{
+        transform: scale(1.05);
+        box-shadow: 6px 6px 10px 0px rgba(34, 60, 80, 0.5);
+    } 
+}
+
+
+
+
 //////////////Секция Билбор///////////
 .billboard{
     background-color: #F1E4E6;
     height: 764px;
-    //position: relative;
     &__flex{
         @include alignment(flex-end,center);
         height: 100%;
@@ -35,7 +65,7 @@
     gap: 30px;
     margin-top: 65px;
     margin-bottom: 96px;
-    & a{
+    & > a{
         &:not(:last-child){
         @include alignment(center,center);
         width: 360px;
@@ -51,6 +81,9 @@
         text-decoration: none;
         position: relative;
         background-size: cover;
+        &:hover{
+            animation: 1s signboard; 
+        }
     }
     & a{
         &::before{
@@ -81,6 +114,12 @@
         text-align: center;
         color: #FFFFFF;
         position: absolute;
+        & > span{
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 29px;
+            color: $brand-color;
+        }
     }
     &--width{
         width: 50%;
@@ -89,12 +128,6 @@
         width: 25%;
     }
 
-    & span{
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 29px;
-        color: $brand-color;
-    }
 }
 
 //////////////Секция Предложения///////
@@ -134,7 +167,6 @@
             transition: 0.2s ease;
         }
         & > form{ //Кнопка продукта добавить в корзину
-            visibility: hidden;
             & > button{
                 @include alignment(center, center);
                 width: 139px;
@@ -145,6 +177,7 @@
                 top:45%;
                 left: 33%;
                 cursor: pointer;
+                opacity: 0%;
                 & > img{
                     width: 26px;
                     margin-right: 11px;
@@ -153,17 +186,25 @@
                     font-size: 14px;
                     line-height: 17px;
                     color: #FFFFFF;
-                    margin: 0 0 0 0;
+                    margin: 0;
                 }
             }
         }
         &:hover div { ////наведение на крточку
             display: block;
             background: rgba(0, 0, 0, 0.7);
+            transition: 4s;
         }
         &:hover button{ ///появление кнопки корзина при наведении на крточку
-            visibility: visible;
+            animation: 2s opacity-btn;
+            animation-delay: 1s;
         }
+        &:hover{
+            animation: 1s card-shadow;
+            animation-fill-mode: both;
+            
+        }
+        
     }
     //-----------Описание продукта--------------//
     & article{

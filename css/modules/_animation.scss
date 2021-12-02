@@ -1,0 +1,35 @@
+@keyframes signboard {
+    0%{
+        transform: rotateX(0deg);
+    }
+    100%{
+        transform: rotateX(360deg);
+    }
+}
+@keyframes opacity-btn {
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+    
+}
+@keyframes card-shadow {
+    0%{
+        transform: scale(1);
+        box-shadow: 0px 0px 0px 0px rgba(34, 60, 80, 0.5);
+    }
+    100%{
+        transform: scale(1.05);
+        box-shadow: 6px 6px 10px 0px rgba(34, 60, 80, 0.5);
+    } 
+}
+@keyframes dark {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 86%;
+    }
+}

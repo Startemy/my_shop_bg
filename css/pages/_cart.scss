@@ -1,198 +1,70 @@
-////////////////CART///////////////////
 .cart{
-    margin-top: 96px;
     @include alignment(space-between,none);
+    @include margtb(96,128);
     flex-wrap: wrap;
-    margin-bottom: 128px;
-
     &__list{
         max-width: 650px;
-    }
-
-    &__list-card{
-        box-shadow: 17px 19px 24px rgba(0,0,0,0.2);
-        width: 652px;
-        height: 306px; 
-
-        & img{
-            max-width: 262px;
-        }
-
-        &--mrg{
+        //////Карточка товара в корзине/////
+        & > div{
+            @include size(652,306);
             @include alignment(space-between,none);
+            box-shadow: 17px 19px 24px rgba(0,0,0,0.2);
             margin-bottom: 40px;
-        }
-
-        & button{
-            border: none;
-            background: none;
-            cursor: pointer;
-            display: flex;
-            align-items: flex-start;
-            margin: 28px 22px 260px 0;
-            & > img{
-                width: 18px;
+            & img{
+                max-width: 262px;
             }
-        }
-    }
-    &__list-desc{
-        &--mrg{
-            margin: 22px 97px 64px 31px;
-        }
-        & > h2{
-            font-size: 24px;
-            line-height: 29px;
-            color: #222222;
-            margin-bottom: 42px;
-            max-width: 210px;
-        }
-        & > p{
-            font-size: 22px;
-            line-height: 35px;
-            color: #575757;
-            & span .color-price{
-                color: $brand-color;
+            /////Описание товара//////
+            & > div{
+                margin: 22px 97px 64px 31px;
+                & h2{
+                    font-size: 24px;
+                    line-height: 29px;
+                    color: #222222;
+                    margin-bottom: 42px;
+                    max-width: 210px;
+                }
+                & p{
+                    font-size: 22px;
+                    line-height: 35px;
+                    color: #575757;
+                    & span .color-price{
+                        color: $brand-color;
+                    }
+                    & input{
+                        width: 44px;
+                        text-align: center;
+                        outline: none;
+                        border: 1px solid #EAEAEA;
+                        font-size: 18px;
+                        line-height: 22px;
+                        color: #656565;
+                        margin-left: 24px;
+                        &::-webkit-outer-spin-button, ///убираем стрелочки из input number
+                        &::-webkit-inner-spin-button {
+                            -webkit-appearance: none;
+                        }
+                    }
+                }
             }
-            & > input{
-                width: 44px;
-                text-align: center;
-                outline: none;
-                border: 1px solid #EAEAEA;
-                font-size: 18px;
-                line-height: 22px;
-                color: #656565;
-                margin-left: 24px;
-                &::-webkit-outer-spin-button, ///убираем стрелочки из input number
-                &::-webkit-inner-spin-button {
-                    -webkit-appearance: none;
+            & button{
+                border: none;
+                background: none;
+                cursor: pointer;
+                display: flex;
+                align-items: flex-start;
+                margin: 28px 22px 260px 0;
+                & img{
+                    width: 18px;
                 }
             }
         }
-}
-    
+    }
     &__list-btnbox{
         padding-top: 32px;
         display: flex;
         justify-content: space-between;
-    }
-    &__btn{
-        background:none;
-        border: 1px solid #A4A4A4;
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 17px;
-        color: #000000;
-        cursor: pointer;
-        &--size{
-            width: 235px;
-            height: 50px;
-        }
-        &--size-ship{
-            margin-top: 13px;
-            width: 100px;
-            height: 35px;
-        }
-        &--font{
-            font-size: 11px;
-            line-height: 13px;
-            color: #4A4A4A;
-        }
-    }
-    /////Form Shipping//////
-    &__shipping{
-        display: flex;
-        flex-direction: column;
-        //margin-left: 128px;
-        margin-bottom: 57px;
-        
-        & h2{
-            font-weight: 300;
-            font-size: 16px;
-            line-height: 19px;
-            color: #222222;
-            margin-bottom: 10px;
-        }
-        & input{
-            width: 360px;
-            height: 45px;
-            margin: 10px auto 10px auto;
-            font-size: 16px;
-            &:focus{
-                outline: none;
-            }
-            &::placeholder{
-                color: black;
-                opacity: 0.4;
-            }
-            &:valid{
-                padding-left: 17px;
-            }
-            &::-webkit-outer-spin-button, ///убираем стрелочки из input number
-            &::-webkit-inner-spin-button {
-                -webkit-appearance: none; 
-            }
-        }   
-    }
-    &__total-pricebox{
-        width: 360px;
-        background: #F5F3F3;
-        margin-top: 57px;
-    } 
-    &__total-price{
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-
-        .total-price-sub_mrg{
-            align-self: flex-end;
-            margin: 39px 34px 12px 0;
-        }
-        .total-price-sub{
-            font-size: 11px;
-            line-height: 13px;
-            color: #4A4A4A;
-            
-            & span{
-                margin-left: 20px;
-            }
-        }
-        .total-price-grand_mrg{
-            margin:0 37px 21px 0;
-            align-self: flex-end;
-        }
-        .total-price-grand{
-            font-size: 16px;
-            line-height: 19px;
-            color: #222222;
-            & span{
-                color: $brand-color;
-                font-weight: bold;
-                margin-left: 20px;
-            }
-        }
-    }
-    &__total-price-greyline{
-        border: 1px solid #EAEAEA;
-        background-color: #EAEAEA;
-        width: 275px;
-        align-self: center;
-    }
-    &__total-price-btn{
-        border: 1px solid $brand-color;
-        background-color: $brand-color;
-        font-size: 16px;
-        line-height: 19px;
-        color: white;
-        font-weight: 300;
-        cursor: pointer;
-        &_mrg{
-            margin-top: 17px;
-            margin-bottom: 42px;
-            align-self: center;
-        }
-        &_size{
-            width: 273px;
-            height: 50px;
+        & button{
+            @include btn-cart(14,17,13,235,50,black);
         }
     }
 }

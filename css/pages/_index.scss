@@ -1,33 +1,3 @@
-@keyframes signboard {
-    0%{
-        transform: rotateX(0deg);
-    }
-    100%{
-        transform: rotateX(360deg);
-    }
-}
-@keyframes opacity-btn {
-    0%{
-        opacity: 0%;
-    }
-    100%{
-        opacity: 100%;
-    }
-    
-}
-@keyframes card-shadow {
-    0%{
-        transform: scale(1);
-        box-shadow: 0px 0px 0px 0px rgba(34, 60, 80, 0.5);
-    }
-    100%{
-        transform: scale(1.05);
-        box-shadow: 6px 6px 10px 0px rgba(34, 60, 80, 0.5);
-    } 
-}
-
-
-
 
 //////////////Секция Билбор///////////
 .billboard{
@@ -63,8 +33,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    margin-top: 65px;
-    margin-bottom: 96px;
+    @include margtb(65,96);
     & > a{
         &:not(:last-child){
         @include alignment(center,center);
@@ -73,28 +42,27 @@
         position: relative;
         background-size: cover;
         }
-    }
-    & a{
         @include alignment(center,center);
         width: 100%;
         height: 180px;
         text-decoration: none;
         position: relative;
         background-size: cover;
+        ///Анимация////
         &:hover{
             animation: 1s signboard; 
         }
-    }
-    & a{
+        ////Затемнение/////
         &::before{
-        content: '';
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        background-color:#211616;
-        opacity: 0.7;
-        }
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color:#211616;
+            opacity: 0.7;
+            }
     }
+    ////Картинки////
     &__fw{
         background-image: url('../image/fast_menu/for_women.jpg');
         }
@@ -107,6 +75,7 @@
     &__ac{
         background-image: url('../image/fast_menu/accesorise.jpg');
     }
+    ///Подписи на акциии//////
     & p{
         text-transform: uppercase;
         font-size: 16px;
@@ -121,132 +90,15 @@
             color: $brand-color;
         }
     }
+    /////Ширина подписей//////
     &--width{
         width: 50%;
     }
     &--width-ac{
         width: 25%;
     }
-
 }
 
-//////////////Секция Предложения///////
-.proposal{
-    @include alignment(center, center);
-    flex-direction: column;
-    & h2{
-        font-size: 30px;
-        line-height: 36px;
-        color: #222222;
-    }
-    & p{
-        font-size: 14px;
-        line-height: 17px;
-        color: #9F9F9F;
-        margin-bottom: 48px;
-    }
-    & > section{
-        display: flex;
-        gap: 30px;
-        flex-wrap: wrap;
-        & > div{
-            width: 360px;
-            height: 581px;
-        }
-    }
-    //--------Появляющееся затемнение с кнопкой корзина----------//
-    &__card-img{
-        position: relative;
-        & > div{           //темный слой
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.0);
-            transition: 0.2s ease;
-        }
-        & > form{ //Кнопка продукта добавить в корзину
-            & > button{
-                @include alignment(center, center);
-                width: 139px;
-                height: 44px;
-                border: 1px solid white;
-                background-color: transparent;
-                position: absolute;
-                top:45%;
-                left: 33%;
-                cursor: pointer;
-                opacity: 0%;
-                & > img{
-                    width: 26px;
-                    margin-right: 11px;
-                }
-                & > p{
-                    font-size: 14px;
-                    line-height: 17px;
-                    color: #FFFFFF;
-                    margin: 0;
-                }
-            }
-        }
-        &:hover div { ////наведение на крточку
-            display: block;
-            background: rgba(0, 0, 0, 0.7);
-            transition: 4s;
-        }
-        &:hover button{ ///появление кнопки корзина при наведении на крточку
-            animation: 2s opacity-btn;
-            animation-delay: 1s;
-        }
-        &:hover{
-            animation: 1s card-shadow;
-            animation-fill-mode: both;
-            
-        }
-        
-    }
-    //-----------Описание продукта--------------//
-    & article{
-    padding: 25px 29px 20px 16px;
-    text-align: left;
-        & > h2{
-            font-size: 13px;
-            line-height: 16px;
-            color: #000000;
-        }
-        & > p{
-            @include font-desc(normal,#5D5D5D);
-            margin: 13px 0 18px 0;
-        }
-        & strong{
-            font-size: 16px;
-            line-height: 19px;
-            color:$brand-color;
-        }
-    }
-    
-    //--------Кнопка Смотреть все продукты---------------//
-    &__btn-catalog{
-        margin: 48px auto 95px auto;
-        & a{
-            color: $brand-color;
-            border: 1px solid $brand-color;
-            padding: 14px 38px;
-            font-size: 16px;
-            line-height: 19px;
-            text-decoration: none;
-        }
-        &:hover a{
-            background-color: $brand-color;
-            color: white;
-        }
-    }
-    &--mrg{
-        margin-top: 128px;
-        margin-bottom: 128px;
-    }
-}
 
 
 

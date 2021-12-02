@@ -1,29 +1,25 @@
 //Голова//
 .header{
     background-color: #222222;
-    &__flex{
+    & nav{
         @include alignment(space-between, center);
         padding: 19px 10px;
     }
     &__leftpart{
         @include alignment(none, center);
-        li{
+        & > li{
             list-style: none;
-        }
-        .leftpart-logo-mrg{
             margin-right: 41px;
         }
     }
     &__rightpart{
         @include alignment(none, center);
         position: relative;
-        li{
+        & > li{
             list-style: none;
-        }
-    }
-    &__rightpart-mrg{
-        &:not(:last-child){
-        margin-right: 33px;
+            &:not(:last-child){
+            margin-right: 33px;
+            }
         }
     }
     ///////MENU//////////////////
@@ -35,8 +31,12 @@
         top: 56px;
         left:165px;
         box-shadow: 0px 0px 26px 3px rgba(34, 60, 80, 0.2);
-        & li{
-            list-style: none;  
+        & h2{
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17px;
+            color: #000000;
+            margin: 37px 0 24px 34px;
         }
         & h3{
             font-size: 14px;
@@ -44,36 +44,32 @@
             color: #F16D7F;
             margin-bottom: 12px;
             margin-left: 34px;
-        }
-        & h3:not(:first-child){
-            margin-top: 20px;
+            &:not(:first-child){
+                margin-top: 20px;
+            }
         }
         & li{
-            font-size: 14px;
-            line-height: 17px;
-            color: #6F6E6E;
-            margin-left: 54px;
-        }
-        & li:not(:last-child){
-            margin-bottom: 11px;
-        }
+            list-style: none; 
+            & a{
+                text-decoration: none;
+                font-size: 14px;
+                line-height: 17px;
+                color: #6F6E6E;
+                margin-left: 54px;
+            }
+            &:not(:last-child){
+                margin-bottom: 11px;
+            }
+        }  
     }
-    &__menu-head{
-        font-weight: bold;
-        font-size: 14px;
-        line-height: 17px;
-        color: #000000;
-        margin: 37px 0 24px 34px;
-    }
-    .rightpart__quantity-pos{
+    /////Количество товара в корзине.....
+    &__quantity-pos{  
         position: relative;
-        .rightpart__quantity-mrg{
+        & div{
+            @include alignment(center, center);
             top: -20%;
             left: 75%;
             position: absolute;
-            @include alignment(center, center);
-        }
-        .rightpart__quantity-view{
             width: 19px;
             height: 19px;
             border-radius: 200px; 

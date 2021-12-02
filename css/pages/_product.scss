@@ -1,5 +1,5 @@
 
-//////////////PAGE PRODUCT/////////
+
 //------------Слайд-------------//
 .slide{
     @include alignment(center,center);
@@ -21,8 +21,6 @@
         width: 47px;
         height: 47px;
         background-color: rgba(0, 0, 0, 0.2);
-        top: 0;
-        left: 0;
         cursor: pointer;
         &__style{
             fill: black;
@@ -118,8 +116,4 @@
         color: white;
     }
     }
-}
-.products-card{   ////Отступы для proposal
-    margin-top: 128px;
-    margin-bottom: 128px;
 }

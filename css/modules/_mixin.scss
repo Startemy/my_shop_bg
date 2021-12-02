@@ -2,10 +2,51 @@
     display: flex;
     justify-content: $jc;
     align-items: $ai;
+
 }
 @mixin font-desc($weight,$color) {
     font-size: 14px;
     font-weight: $weight;
     line-height: 17px;
     color: $color
+}
+@mixin margtb($top,$btm){
+    margin-top: $top+px;
+    margin-bottom: $btm+px;
+    
+}
+@mixin size($w,$h) {
+    width: $w+px;
+    height: $h+px;
+    
+}
+@mixin size_percent($w,$h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin botton ($clrl,$clrback,$w, $h, $t,$b){
+    border: 1px solid $clrl;
+    background-color: $clrback;
+    font-size: 16px;
+    line-height: 19px;
+    color: white;
+    font-weight: 300;
+    cursor: pointer;
+    @include size($w,$h);
+    margin-top:$t+px;
+    margin-bottom: $b+px;
+    align-self: center;
+}
+
+@mixin btn-cart($fs,$lh,$mgr,$w,$h,$clr){
+    background:none;
+    border: 1px solid #A4A4A4;
+    font-weight: 300;
+    font-size: $fs+px;
+    line-height:$lh+px;
+    color: $clr;
+    cursor: pointer;
+    @include size($w,$h);
+    margin-top:$mgr+px;
 }

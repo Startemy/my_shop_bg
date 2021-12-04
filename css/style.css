@@ -1951,6 +1951,9 @@ body {
     position: relative;
     background-size: cover;
   }
+  .stocks--width {
+    width: 60%;
+  }
 }
 
 @media (max-width: 1024px) {

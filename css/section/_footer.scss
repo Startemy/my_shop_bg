@@ -1,8 +1,9 @@
 .footer{
     & .footer-top{
         background: #222224;
+        height: 341px;
+        @include alignment(center,center);
         &__box{
-            height: 341px;
             @include alignment(center,center);
             & > div{
                 max-width: 360px;

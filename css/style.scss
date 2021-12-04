@@ -11,12 +11,14 @@ $brand-color: #F16D7F;
 
 body{
     font-family: 'Lato', sans-serif;
+    font-style: normal;
 }
 .container{
     max-width: 1160px;
     margin: 0 auto;
     padding: 0 10px;
 }
+
 .main{
     min-height: 70vh;
     display: flex;
@@ -24,7 +26,6 @@ body{
     &__grow{
         flex-grow: 1;
     }
-
 }
 
 @import 'section/header';
@@ -36,3 +37,4 @@ body{
 @import 'pages/cart';
 @import 'pages/registration';
 @import 'section/footer';
+@import 'modules/media';

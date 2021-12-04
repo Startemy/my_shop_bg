@@ -21,48 +21,102 @@
             margin-right: 33px;
             }
         }
-    }
-    ///////MENU//////////////////
-    &__menu-box{
-        min-width: 232px;
-        min-height: 764px;
-        position: absolute;
-        background-color: white;
-        top: 56px;
-        left:165px;
-        box-shadow: 0px 0px 26px 3px rgba(34, 60, 80, 0.2);
-        & h2{
-            font-weight: bold;
-            font-size: 14px;
-            line-height: 17px;
-            color: #000000;
-            margin: 37px 0 24px 34px;
-        }
-        & h3{
-            font-size: 14px;
-            line-height: 17px;
-            color: #F16D7F;
-            margin-bottom: 12px;
-            margin-left: 34px;
-            &:not(:first-child){
-                margin-top: 20px;
+        .gamburger{
+            display: flex;
+            flex-direction: column;
+            width: 32px;
+            height: 23px;
+            & span{
+                border: 1px solid #E8E8E8;
+                background-color: #E8E8E8;
+                &:not(:last-child){
+                    margin-bottom: 8px;
+                }
             }
         }
-        & li{
-            list-style: none; 
-            & a{
-                text-decoration: none;
-                font-size: 14px;
-                line-height: 17px;
-                color: #6F6E6E;
-                margin-left: 54px;
+        .menu-shell{
+            position: absolute;
+            left: 170px;
+            top: 56px;
+            width: 232px;
+            height: 764px;
+            background-color: white;
+            box-shadow: 0px 0px 26px 3px rgba(34, 60, 80, 0.2);
+            z-index: 2;
+            & .menu-box{
+                & h2{
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #000000;
+                    padding: 37px 0 0 34px;
+                }
+                & h3{
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #F16D7F;
+                    margin-bottom: 12px;
+                    margin-left: 34px;
+                    &:not(:first-child){
+                        margin-top: 20px;
+                    }
+                }
+                & li{
+                    list-style: none; 
+                    & a{
+                        text-decoration: none;
+                        font-size: 14px;
+                        line-height: 17px;
+                        color: #6F6E6E;
+                        margin-left: 54px;
+                    }
+                    &:not(:last-child){
+                        margin-bottom: 11px;
+                    }
+                }  
             }
-            &:not(:last-child){
-                margin-bottom: 11px;
+        }
+        .burger-input{
+            display: none;
+        }
+                /////Выезд меню///////
+        .burger-input:checked ~ .gamburger > span{ 
+            &:nth-child(1){
+                animation: 1s gamburger-top;
+                animation-fill-mode: forwards;
             }
-        }  
+            &:nth-child(2){
+                animation: 1s gamburger-mdl;
+                animation-fill-mode: forwards;
+            }
+            &:nth-child(3){
+                animation: 1s gamburger-btm;
+                animation-fill-mode: forwards;
+            }
+        }
+        .burger-input:not(:checked) ~ .gamburger > span{ 
+            &:nth-child(1){
+                animation: 1s gamburger-top-rev;
+            }
+            &:nth-child(2){
+                animation: 1s gamburger-mdl-rev;
+                animation-delay: 1s;
+            }
+            &:nth-child(3){
+                animation: 1s gamburger-btm-rev;
+            }
+        }
+        .burger-input:checked ~ .menu-shell{
+            animation: 1s menu-visible;
+            animation-fill-mode: forwards;
+
+        } 
+        .burger-input:not(:checked) ~ .menu-shell{
+            animation: 1s menu-invisible;
+            animation-fill-mode: forwards;
+        }
     }
-    /////Количество товара в корзине.....
+    /////Количество товара в корзине////////
     &__quantity-pos{  
         position: relative;
         & div{
@@ -78,5 +132,6 @@
             line-height: 14px;
             color: #FFFFFF;
         }
-    }  
+    }
 }
+

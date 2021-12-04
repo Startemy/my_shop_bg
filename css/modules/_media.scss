@@ -1,0 +1,81 @@
+
+@media (max-width:1024px){
+    .container{
+        max-width: 768px;
+    }
+}
+
+@media (max-width:1024px){
+    .billboard{
+        height: 368px;
+        &__flex{
+            background-size: 385px;
+            background-position: -100px;
+        }
+    }
+    
+}
+
+@media (max-width:1024px){
+    .header{
+        &__menu-box{
+            display: none;
+        }
+    }
+}
+
+@media (max-width:1024px){
+    .stocks{
+        @include margtb(20,154);
+        gap: 20px;
+        & > a{
+            &:not(:last-child){
+            @include alignment(center,center);
+            width: 31.46%;
+            height: 168px;
+            position: relative;
+            background-size: cover;
+            }
+            @include alignment(center,center);
+            width: 100%;
+            height: 116px;
+            text-decoration: none;
+            position: relative;
+            background-size: cover;
+        }
+    }
+}
+
+@media (max-width:1024px){
+    .product-card{
+        & section{
+            gap: 16px;
+        }
+    }
+}
+
+@media (max-width:1024px){
+    .footer{
+        & .footer-top{
+                height: 610px;
+                &__box{
+                flex-direction: column;
+                & > div{
+                    @include margtb(24,24);
+                }
+            }
+        }
+        & .footer-mdl{
+            &__box{
+                @include alignment(center, center);
+                flex-direction: column;
+            }
+            &__intersec{
+                @include margtb(54,48);
+            }
+            &__subscribe{
+                margin-bottom: 146px;
+            }
+        }
+    }
+}

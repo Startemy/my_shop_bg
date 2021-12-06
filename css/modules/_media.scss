@@ -1,11 +1,8 @@
 
-@media (max-width:1024px){
+@media (max-width:1060px){
     .container{
         max-width: 768px;
     }
-}
-
-@media (max-width:1024px){
     .billboard{
         height: 368px;
         &__flex{
@@ -13,18 +10,11 @@
             background-position: -100px;
         }
     }
-    
-}
-
-@media (max-width:1024px){
     .header{
         &__menu-box{
             display: none;
         }
     }
-}
-
-@media (max-width:1024px){
     .stocks{
         @include margtb(20,154);
         gap: 20px;
@@ -47,17 +37,11 @@
             width: 60%;
         }
     }
-}
-
-@media (max-width:1024px){
     .product-card{
         & section{
             gap: 16px;
         }
     }
-}
-
-@media (max-width:1024px){
     .footer{
         & .footer-top{
                 height: 610px;

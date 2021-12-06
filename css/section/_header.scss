@@ -80,6 +80,7 @@
             display: none;
         }
                 /////Выезд меню///////
+
         .burger-input:checked ~ .gamburger > span{ 
             &:nth-child(1){
                 animation: 1s gamburger-top;
@@ -109,11 +110,79 @@
         .burger-input:checked ~ .menu-shell{
             animation: 1s menu-visible;
             animation-fill-mode: forwards;
-
         } 
         .burger-input:not(:checked) ~ .menu-shell{
             animation: 1s menu-invisible;
             animation-fill-mode: forwards;
+        }
+
+        @media (max-width:695px) {
+            @keyframes gamburger-top {
+                0%{
+                    transform:translate(0px) rotate(0deg);
+                }
+                100%{
+                    transform:translate(50px, 75px) rotate(45deg);
+                    border: 1px solid #6F6E6E;
+                    background-color: #6F6E6E;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    z-index: 3;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            @keyframes gamburger-mdl {
+                0%{
+                    opacity: 100%;
+                }
+                100%{
+                    opacity: 0%;
+                }
+            }
+            @keyframes gamburger-btm {
+                0%{
+                    transform:translate(0px) rotate(0deg);
+                }
+                100%{
+                    transform:translate(50px, 54.5px) rotate(-45deg);
+                    border: 1px solid #6F6E6E;
+                    background-color: #6F6E6E;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    z-index: 3;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            .menu-shell{
+                left: 90px;
+                top:51px;
+            }
+            @keyframes gamburger-top-rev {
+                0%{
+                    transform:translate(50px, 75px) rotate(45deg);
+                }
+                100%{
+                    transform:translate(0px) rotate(0deg);
+                }
+            }
+            @keyframes gamburger-btm-rev {
+                0%{
+                    transform:translate(50px, 54.5px) rotate(-45deg);     
+                }
+                100%{
+                    transform:translate(0px) rotate(0deg);
+                }
+            }
+            @keyframes gamburger-mdl-rev {
+                0%{
+                    opacity: 0%;
+                }
+                100%{
+                    opacity: 100%;
+                }
+            }
         }
     }
     /////Количество товара в корзине////////

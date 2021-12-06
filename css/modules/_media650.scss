@@ -1,0 +1,57 @@
+
+
+
+@media (max-width:695px){
+    .header{
+        &__rightpart{
+            & > li:nth-child(2){
+                display: none;
+            }
+            & > li:nth-child(3){
+                display: none;
+            }
+        }
+    }
+
+    .billboard{
+        background-color: #F1E4E6;
+        &__flex{
+            @include alignment(center,center);
+            background: none;
+        }
+        &__title{
+            margin-right: 0;
+        }
+    }
+
+    .stocks{
+        flex-wrap: nowrap;
+        flex-direction: column;
+        & > a{
+            &:not(:last-child){
+            width: 100%;
+            height: 260px;
+            position: relative;
+            background-size: cover;
+            }
+            @include alignment(center,center);
+            width: 100%;
+            height: 180px;
+            text-decoration: none;
+            position: relative;
+            background-size: cover;
+        }
+        &--width{
+            width: 45%;
+        }
+        &--width-ac{
+            width: 45%;
+        }
+    }
+    .product-card{
+        & section{
+            @include alignment(center,center);
+        }
+    }  
+    
+}

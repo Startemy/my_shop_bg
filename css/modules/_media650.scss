@@ -53,5 +53,80 @@
             @include alignment(center,center);
         }
     }  
+        
+    //////Анимация меню и гамбургер.
+    @keyframes gamburger-top {
+        0%{
+            transform:translate(0px) rotate(0deg);
+        }
+        100%{
+            transform:translate(50px, 75px) rotate(45deg);
+            border: 1px solid #6F6E6E;
+            background-color: #6F6E6E;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 3;
+            width: 20px;
+            height: 20px;
+        }
+    }
+    @keyframes gamburger-mdl {
+        0%{
+            opacity: 100%;
+        }
+        100%{
+            opacity: 0%;
+        }
+    }
+    @keyframes gamburger-btm {
+        0%{
+            transform:translate(0px) rotate(0deg);
+        }
+        100%{
+            transform:translate(50px, 54.5px) rotate(-45deg);
+            border: 1px solid #6F6E6E;
+            background-color: #6F6E6E;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 3;
+            width: 20px;
+            height: 20px;
+        }
+    }
+    @keyframes gamburger-top-rev {
+        0%{
+            transform:translate(50px, 75px) rotate(45deg);
+        }
+        100%{
+            transform:translate(0px) rotate(0deg);
+        }
+    }
+    @keyframes gamburger-btm-rev {
+        0%{
+            transform:translate(50px, 54.5px) rotate(-45deg);  
+
+        }
+        100%{
+            transform:translate(0px) rotate(0deg);
+        }
+    }
+    @keyframes gamburger-mdl-rev {
+        0%{
+            opacity: 0%;
+        }
+        100%{
+            opacity: 100%;
+        }
+    }
     
+    @keyframes menu-invisible{
+        0%{
+            transform: translateX(-232px);
+            opacity: 100%;
+        }
+        100%{
+            transform: translateX(0px);
+            opacity: 0;
+        }
+    }
 }

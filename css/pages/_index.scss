@@ -2,7 +2,7 @@
 //////////////Секция Билбор///////////
 .billboard{
     background-color: #F1E4E6;
-    height: 764px;
+    height: calc(100vh - 79px);
     &__flex{
         @include alignment(flex-end,center);
         height: 100%;
@@ -14,14 +14,13 @@
         padding-left: 16px;
         margin-right: 102px;
         & h1{
-            font-weight:  bold;
+            font-weight: 900;
             font-size: 48px;
             line-height: 46px;
         }
         & span{
-            font-weight: bold;
+            font-weight: 700;
             font-size: 32px;
-            line-height: 24px;
         }
         &__fashion {
             color: $brand-color;

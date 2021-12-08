@@ -342,7 +342,6 @@ body {
 }
 
 .main {
-  min-height: 70vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -594,7 +593,9 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  background: url("../image/man_on_head.png") no-repeat -216px;
+  background: url("../image/man_on_head.png") no-repeat;
+  background-size: 63%;
+  background-position: -206px 35px;
 }
 
 .billboard__title {
@@ -1699,6 +1700,10 @@ body {
 .registration button svg {
   margin-left: 20px;
   fill: white;
+}
+
+.footer {
+  height: calc(100vh - 868px);
 }
 
 .footer .footer-top {

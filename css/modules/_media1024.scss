@@ -1,12 +1,26 @@
 
-@media (max-width:1060px){
+@media (min-width:700px) and (max-width:1025px) and (min-height:768px){
     .container{
         max-width: 768px;
     }
     .billboard{
+        height: calc(60vh - 79px);
         &__flex{
-            background-size: 385px;
-            background-position: -100px;
+            background-size: contain;
+            background-position: -50px bottom;
+        }
+        &__title{
+        margin-right: 0; 
+        & h1{
+            font-weight: 900;
+            font-size: 44px;
+            line-height: 53px;
+        }
+        & span, p{
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;  
+        }
         }
     }
     .header{

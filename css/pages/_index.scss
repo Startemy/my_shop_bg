@@ -2,14 +2,22 @@
 //////////////Секция Билбор///////////
 .billboard{
     background-color: #F1E4E6;
-    height: calc(100vh - 79px);
+    height: calc(60vh - 79px);
+    @media (min-width:2561px),(min-height:1500px){
+        height: calc(40vh - 79px);
+    }
     &__flex{
         @include alignment(flex-end,center);
         height: 100%;
         background: url('../image/man_on_head.png') no-repeat;
-        background-size: 63%;
-        background-position: -206px 35px;
+        background-size: contain;
+        background-position: -14% bottom;
     } 
+    @media (min-width:2561px),(min-height:1500px){
+        &__flex{
+            background-position: -163px bottom;
+        } 
+    }
     &__title{
         max-width: 425px;
         border-left: 12px solid $brand-color;
@@ -20,14 +28,14 @@
             font-size: 48px;
             line-height: 46px;
         }
-        & span{
+        & span, p{
             font-weight: 700;
             font-size: 32px;
         }
         &__fashion {
             color: $brand-color;
         }
-    }         
+    }        
 }
 //////////////Секция Акции/////////////
 .stocks{

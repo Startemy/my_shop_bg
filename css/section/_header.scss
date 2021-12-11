@@ -44,11 +44,12 @@
             background-color: white;
             box-shadow: 0px 0px 26px 3px rgba(34, 60, 80, 0.2);
             z-index: 2;
-            @media (max-width:650px){
-            left: 86px;
-            top: 51px;  
+            @media (max-width:690px){
+                left: 83px;
+                top: 51px;  
             }
-            @media (max-width:1060px){
+            @media (min-width:700px) and (max-width:1024px){
+                left: 179px;
                 overflow-y: scroll;
             }
             & .menu-box{

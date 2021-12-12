@@ -1,7 +1,6 @@
 ///////////////CATALOG///////////////////////
 .page-title{
     background: #F8F3F4;
-    
     &__heading{
     min-height: 148px;
     @include alignment(space-between, center);
@@ -21,7 +20,7 @@
     &__crumbs{
         & a:nth-last-child(1){
             color:$brand-color;
-    }
+        }
     }
 }
 //--------------секция фильтров----------------//
@@ -41,7 +40,19 @@ position: relative;
         color: #000000;
         text-decoration: none;
         outline: none;
-        &[open] .filter__title{
+        & h2{
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            color: #000000;
+            text-decoration: none;
+            outline: none;
+        }
+        & > summary{
+            display: flex;
+            @include alignment(flex-start,center);
+        }
+        &[open] .filter__title > h2{
             color: $brand-color;
         }
         &[open] .filter__title svg{
@@ -68,6 +79,7 @@ position: relative;
         cursor: pointer;
         & svg{        
             margin-left: 11px;
+            width: 15px;
         }
     }
     &__content{
@@ -112,7 +124,7 @@ position: relative;
     ////Фильтр по данным продукта///////////////
     &__exception{
         @include alignment(center,center);
-        & h2:not(:last-child){
+        & div:not(:last-child){
             margin-right: 28px;
         }
     }
@@ -138,7 +150,7 @@ position: relative;
         & ul{
             box-shadow: 6px 4px 35px rgba(0, 4, 4, 0.25);
             visibility: hidden;
-            width: 100%;
+            width: 120%;
             border: 1px solid white;
             background-color: white;
             display: flex;
@@ -160,7 +172,7 @@ position: relative;
         }
         &--space{
             top: 100%;
-            right: 6px;
+            right: -12px;
         }
         & label{
             margin: 6px 30px 6px 6px;

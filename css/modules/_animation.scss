@@ -67,7 +67,7 @@
         height: 20px;
     }
 }
-    @media (max-width:699px){
+    @media (max-width:699px),(max-height:699px){
         @keyframes gamburger-top {
             0%{
                 transform:translate(0px) rotate(0deg);
@@ -93,7 +93,7 @@
         opacity: 0%;
     }
 }
-    @media (max-width:699px){
+    @media (max-width:699px),(max-height:699px){
         @keyframes gamburger-mdl {
             0%{
                 opacity: 100%;
@@ -119,7 +119,7 @@
         height: 20px;
     }
 }
-    @media (max-width:699px){
+    @media (max-width:699px),(max-height:699px){
         @keyframes gamburger-btm {
             0%{
                 transform:translate(0px) rotate(0deg);
@@ -146,7 +146,7 @@
         transform:translate(0px) rotate(0deg);
     }
 }
-    @media (max-width:699px){
+    @media (max-width:699px),(max-height:699px){
         @keyframes gamburger-top-rev {
             0%{
                 transform:translate(50px, 75px) rotate(45deg);
@@ -165,7 +165,7 @@
         transform:translate(0px) rotate(0deg);
     }
 }
-    @media (max-width:699px){
+    @media (max-width:699px),(max-height:699px){
         @keyframes gamburger-btm-rev {
             0%{
                 transform:translate(50px, 54.5px) rotate(-45deg);  
@@ -185,7 +185,7 @@
         opacity: 100%;
     }
 }
-@media (max-width:699px){
+@media (max-width:699px),(max-height:699px){
     @keyframes gamburger-mdl-rev {
         0%{
             opacity: 0%;

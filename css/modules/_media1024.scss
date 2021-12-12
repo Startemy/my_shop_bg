@@ -1,5 +1,5 @@
 
-@media (min-width:700px) and (max-width:1025px) and (min-height:768px){
+@media (min-width:700px) and (max-width:1024px) and (min-height:701px){
     .container{
         max-width: 768px;
     }
@@ -77,5 +77,10 @@
                 margin-bottom: 146px;
             }
         }
+    }
+
+    /////Filter Catalog/////
+    .filter{
+        @include alignment(flex-end,center);
     }
 }

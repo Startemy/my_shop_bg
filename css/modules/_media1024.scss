@@ -2,12 +2,12 @@
 @media (min-width:700px) and (max-width:1024px) and (min-height:701px){
     .container{
         max-width: 768px;
+        padding: 0;
     }
     .billboard{
-        height: calc(60vh - 79px);
         &__flex{
-            background-size: contain;
-            background-position: -50px bottom;
+            background-size: 96%;
+            background-position: -420% bottom;
         }
         &__title{
         margin-right: 0; 
@@ -82,5 +82,26 @@
     /////Filter Catalog/////
     .filter{
         @include alignment(flex-end,center);
+    }
+    ///////PRODUCT///////
+    .desc-prod{
+        margin-top: 0;
+    }
+
+    .slide{
+        max-width: 768px;
+    }
+
+    ////////CART////////
+    .form{
+        margin-top: 64px;
+        @include alignment(center,center);
+        gap: 15px;
+        & > div:nth-child(2){
+            margin-top: 0px;
+        }
+    }
+    .cart{
+        @include alignment(center,center);
     }
 }

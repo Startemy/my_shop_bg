@@ -1,8 +1,9 @@
 
-@media (max-width:699px),(max-height:699px){
+@media (max-width:699px),(max-height:789px){
 
     .container{
         max-width: 375px;
+        padding: 0;
     }
 
     .header{
@@ -120,6 +121,29 @@
             & div:not(:last-child){
                 margin-right: 23px;
             }
+            &--font{
+                h2{
+                    font-size: 10px;
+                    line-height: 12px;  
+                }
+            }
         }
+    }
+
+    //////PRODUCT//////
+    .desc-prod{
+        margin-top: 0;
+        & p{
+            max-width: 326px;
+        }
+        &__grey-line{
+            width: 174px;
+        }
+    }
+    .slide{
+        max-width: 375px;
+    }
+    .product-card--mrg{
+            @include margtb(64,64);
     }
 }

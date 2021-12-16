@@ -505,19 +505,12 @@ body {
 }
 
 .main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.main__grow {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: min-content 1fr min-content;
+      grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
+      grid-template-rows: min-content 1fr min-content;
 }
 
 .header {
@@ -758,7 +751,7 @@ body {
           align-items: center;
   height: 100%;
   background: url("../image/man_on_head.png") no-repeat;
-  background-size: 64%;
+  background-size: 65%;
   background-position: -50% bottom;
 }
 
@@ -1565,6 +1558,7 @@ body {
 
 .form > div input:valid, .form > div input:invalid {
   padding-left: 17px;
+  padding-right: 17px;
 }
 
 .form > div input::-webkit-outer-spin-button, .form > div input::-webkit-inner-spin-button {
@@ -1752,7 +1746,7 @@ body {
 }
 
 .cart__list > div button img {
-  width: 18px;
+  width: 9px;
 }
 
 .cart__list-btnbox {
@@ -1889,10 +1883,6 @@ body {
 .registration .button__join svg {
   margin-left: 20px;
   fill: white;
-}
-
-.footer {
-  height: calc(100vh - 868px);
 }
 
 .footer .footer-top {
@@ -2103,8 +2093,7 @@ body {
 
 @media (min-width: 700px) and (max-width: 1024px) {
   .billboard__flex {
-    background-size: 96%;
-    background-position: -420% bottom;
+    background-position: -25% bottom;
   }
   .billboard__title {
     margin-right: 0;
@@ -2431,6 +2420,9 @@ body {
   .form {
     margin-top: 48px;
   }
+  .cart {
+    margin-top: 39px;
+  }
   .cart__list {
     max-width: 375px;
   }
@@ -2438,6 +2430,7 @@ body {
     max-height: 188px;
     margin-left: 9px;
     margin-right: 9px;
+    margin-bottom: 32px;
   }
   .cart__list > div img {
     max-height: 188px;
@@ -2449,7 +2442,7 @@ body {
     font-size: 16px;
     line-height: 19px;
     color: #222222;
-    margin-bottom: 42px;
+    margin-bottom: 25px;
     max-width: 210px;
   }
   .cart__list > div > div p {

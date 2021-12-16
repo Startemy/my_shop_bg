@@ -146,13 +146,14 @@
         margin-top: 48px;
     }
     .cart{
+        margin-top: 39px;
         &__list{
             max-width: 375px;
             & > div{
                 max-height: 188px;
                 margin-left: 9px;
                 margin-right: 9px;
-
+                margin-bottom: 32px;
                 & img{
                     max-height: 188px;
                 }
@@ -163,7 +164,7 @@
                         font-size: 16px;
                         line-height: 19px;
                         color: #222222;
-                        margin-bottom: 42px;
+                        margin-bottom: 25px;
                         max-width: 210px;
                     }
                     & p{

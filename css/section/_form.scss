@@ -25,6 +25,7 @@
             }
             &:valid, &:invalid{
                 padding-left: 17px;
+                padding-right: 17px;
             }
             &::-webkit-outer-spin-button, ///убираем стрелочки из input number
             &::-webkit-inner-spin-button {

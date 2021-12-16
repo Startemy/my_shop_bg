@@ -6,7 +6,6 @@
         max-width: 734px;
         //////Карточка товара в корзине/////
         & > div{
-          //@include size(652,306);
             max-height: 306px;
             @include alignment(space-between,none);
             box-shadow: 17px 19px 24px rgba(0,0,0,0.2);
@@ -55,7 +54,7 @@
                 align-items: flex-start;
                 margin: 28px 22px 260px 0;
                 & img{
-                    width: 18px;
+                    width: 9px;
                 }
             }
         }

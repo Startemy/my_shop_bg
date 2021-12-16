@@ -1,11 +1,5 @@
 
-@media (max-width:699px),(max-height:789px){
-
-    .container{
-        max-width: 375px;
-        padding: 0;
-    }
-
+@media (min-width:375px) and (max-width:699px){
     .header{
         &__rightpart{
             & > li:nth-child(2){
@@ -145,5 +139,62 @@
     }
     .product-card--mrg{
             @include margtb(64,64);
+    }
+
+    /////////CART///////
+    .form{
+        margin-top: 48px;
+    }
+    .cart{
+        &__list{
+            max-width: 375px;
+            & > div{
+                max-height: 188px;
+                margin-left: 9px;
+                margin-right: 9px;
+
+                & img{
+                    max-height: 188px;
+                }
+                /////Описание товара//////
+                & > div{
+                    margin: 13px 31px 37px 17px;
+                    & h2{
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: #222222;
+                        margin-bottom: 42px;
+                        max-width: 210px;
+                    }
+                    & p{
+                        font-size: 14px;
+                        line-height: 17px;
+                        color: #575757;
+                        & span .color-price{
+                            color: $brand-color;
+                        }
+                        & input{
+                            width: 24px;
+                            text-align: center;
+                            outline: none;
+                            border: 1px solid #EAEAEA;
+                            font-size: 10px;
+                            line-height: 12px;
+                            color: #656565;
+                            margin-left: 15px;
+                            &::-webkit-outer-spin-button, ///убираем стрелочки из input number
+                            &::-webkit-inner-spin-button {
+                                -webkit-appearance: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__list-btnbox{
+            & button{
+                @include btn-cart(14,17,13,175,33,black);
+            }
+        }
     }
 }

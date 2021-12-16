@@ -48,7 +48,7 @@
             margin-right: 23px;
         }
     }   
-    & button{
+    & .button__join{
         @include botton($brand-color,$brand-color,167,50,39,42);
         align-self: flex-start;
         & svg{

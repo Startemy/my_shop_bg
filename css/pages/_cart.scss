@@ -3,10 +3,11 @@
     @include margtb(96,128);
     flex-wrap: wrap;
     &__list{
-        max-width: 650px;
+        max-width: 734px;
         //////Карточка товара в корзине/////
         & > div{
-            @include size(652,306);
+          //@include size(652,306);
+            max-height: 306px;
             @include alignment(space-between,none);
             box-shadow: 17px 19px 24px rgba(0,0,0,0.2);
             margin-bottom: 40px;

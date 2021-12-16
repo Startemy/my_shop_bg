@@ -499,6 +499,7 @@ body {
 
 .container {
   max-width: 1160px;
+  min-width: 374px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -1677,12 +1678,11 @@ body {
 }
 
 .cart__list {
-  max-width: 650px;
+  max-width: 734px;
 }
 
 .cart__list > div {
-  width: 652px;
-  height: 306px;
+  max-height: 306px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1867,7 +1867,7 @@ body {
   margin-right: 23px;
 }
 
-.registration button {
+.registration .button__join {
   border: 1px solid #F16D7F;
   background-color: #F16D7F;
   font-size: 16px;
@@ -1886,7 +1886,7 @@ body {
       align-self: flex-start;
 }
 
-.registration button svg {
+.registration .button__join svg {
   margin-left: 20px;
   fill: white;
 }
@@ -2101,11 +2101,7 @@ body {
   fill: white;
 }
 
-@media (min-width: 700px) and (max-width: 1024px) and (min-height: 701px) {
-  .container {
-    max-width: 768px;
-    padding: 0;
-  }
+@media (min-width: 700px) and (max-width: 1024px) {
   .billboard__flex {
     background-size: 96%;
     background-position: -420% bottom;
@@ -2249,11 +2245,7 @@ body {
   }
 }
 
-@media (max-width: 699px), (max-height: 789px) {
-  .container {
-    max-width: 375px;
-    padding: 0;
-  }
+@media (min-width: 375px) and (max-width: 699px) {
   .header__rightpart > li:nth-child(2) {
     display: none;
   }
@@ -2435,6 +2427,63 @@ body {
   .product-card--mrg {
     margin-top: 64px;
     margin-bottom: 64px;
+  }
+  .form {
+    margin-top: 48px;
+  }
+  .cart__list {
+    max-width: 375px;
+  }
+  .cart__list > div {
+    max-height: 188px;
+    margin-left: 9px;
+    margin-right: 9px;
+  }
+  .cart__list > div img {
+    max-height: 188px;
+  }
+  .cart__list > div > div {
+    margin: 13px 31px 37px 17px;
+  }
+  .cart__list > div > div h2 {
+    font-size: 16px;
+    line-height: 19px;
+    color: #222222;
+    margin-bottom: 42px;
+    max-width: 210px;
+  }
+  .cart__list > div > div p {
+    font-size: 14px;
+    line-height: 17px;
+    color: #575757;
+  }
+  .cart__list > div > div p span .color-price {
+    color: #F16D7F;
+  }
+  .cart__list > div > div p input {
+    width: 24px;
+    text-align: center;
+    outline: none;
+    border: 1px solid #EAEAEA;
+    font-size: 10px;
+    line-height: 12px;
+    color: #656565;
+    margin-left: 15px;
+  }
+  .cart__list > div > div p input::-webkit-outer-spin-button, .cart__list > div > div p input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+  .cart__list-btnbox button {
+    background: none;
+    border: 1px solid #A4A4A4;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: black;
+    cursor: pointer;
+    width: 175px;
+    height: 33px;
+    margin-top: 13px;
   }
 }
 /*# sourceMappingURL=style.css.map */

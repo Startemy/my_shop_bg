@@ -1,9 +1,5 @@
 
-@media (min-width:700px) and (max-width:1024px) and (min-height:701px){
-    .container{
-        max-width: 768px;
-        padding: 0;
-    }
+@media (min-width:700px) and (max-width:1024px){
     .billboard{
         &__flex{
             background-size: 96%;

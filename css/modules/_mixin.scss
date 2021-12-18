@@ -16,11 +16,6 @@
     
 }
 @mixin size($w,$h) {
-    width: $w+px;
-    height: $h+px;
-    
-}
-@mixin size_percent($w,$h) {
     width: $w;
     height: $h;
 }

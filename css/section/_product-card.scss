@@ -17,7 +17,8 @@
         gap: 30px;
         flex-wrap: wrap;
         & > div{
-            @include size(360,581);
+            max-width: 360px;
+            min-height: 360px;
         }
     }
     //--------Появляющееся затемнение с кнопкой корзина----------//
@@ -27,7 +28,7 @@
         width: 360px;
         & > a{
             position: absolute;
-            @include size_percent(100%,100%);
+            @include size(100%,100%);
         }
         & form{ 
             //Кнопка добавить в корзину появляющаяся////
@@ -70,7 +71,7 @@
             animation: 2s dark;
             content: ' ';
             background-color: #3A3838;
-            @include size_percent(100%,100%);
+            @include size(100%,100%);
             position: absolute;
             animation-fill-mode: forwards;
         } 
@@ -80,9 +81,12 @@
     padding: 25px 29px 20px 16px;
     text-align: left;
         & h2{
-            font-size: 13px;
-            line-height: 16px;
-            color: #000000;
+            & a{
+                text-decoration: none;
+                font-size: 13px;
+                line-height: 16px;
+                color: #000000;
+            }
         }
         & p{
             @include font-desc(normal,#5D5D5D);

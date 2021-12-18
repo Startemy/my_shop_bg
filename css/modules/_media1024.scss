@@ -2,7 +2,8 @@
 @media (min-width:700px) and (max-width:1024px){
     .billboard{
         &__flex{
-            background-position: -25% bottom;
+            background-size: contain;
+            background-position: -110px bottom;
         }
         &__title{
         margin-right: 0; 

@@ -7,8 +7,8 @@
         @include alignment(flex-end,center);
         height: 100%;
         background: url('../image/man_on_head.png') no-repeat;
-        background-size: 65%;
-        background-position: -50% bottom;
+        background-size: contain;
+        background-position: -212px bottom;
     } 
     &__title{
         max-width: 425px;
@@ -38,14 +38,12 @@
     & > a{
         &:not(:last-child){
         @include alignment(center,center);
-        width: 31.58%;
-        height: 260px;
+        @include size(31.58%,260px);
         position: relative;
         background-size: cover;
         }
         @include alignment(center,center);
-        width: 100%;
-        height: 180px;
+        @include size(100%,180px);
         text-decoration: none;
         position: relative;
         background-size: cover;

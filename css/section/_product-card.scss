@@ -24,10 +24,10 @@
     //--------Появляющееся затемнение с кнопкой корзина----------//
     &__img{
         position: relative;
-        @include size(420px,360px);
+        @include size(360px,420px);
         & > a{
             position: absolute;
-            cursor: url(https://ani.cursors-4u.net/toons/too-12/too1117.ani), url(https://ani.cursors-4u.net/toons/too-12/too1117.png), auto !important;
+            cursor: default;
             @include size(100%,100%);
         }
         & form{ 
@@ -55,7 +55,7 @@
             }
         }
         ///затемнение картинки//////
-        &:hover a{
+        &:hover > a{
             z-index: 1;
         }
         &:hover button{ ///появление кнопки корзина при наведении на крточку
@@ -81,7 +81,7 @@
     padding: 25px 29px 20px 16px;
     text-align: left;
         & h2{
-            & a{
+            & > a{
                 text-decoration: none;
                 font-size: 13px;
                 line-height: 16px;

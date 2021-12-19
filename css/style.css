@@ -671,10 +671,11 @@ body {
   .header__rightpart .menu-shell {
     left: 83px;
     top: 52px;
+    overflow-y: scroll;
   }
 }
 
-@media (min-width: 700px) and (max-width: 1025px) and (min-height: 701px) {
+@media (min-width: 700px) and (max-width: 1024px) {
   .header__rightpart .menu-shell {
     left: 179px;
     overflow-y: scroll;
@@ -695,17 +696,18 @@ body {
   color: #F16D7F;
   margin-bottom: 12px;
   margin-left: 34px;
-}
-
-.header__rightpart .menu-shell .menu-box h3:not(:first-child) {
   margin-top: 20px;
 }
 
-.header__rightpart .menu-shell .menu-box li {
+.header__rightpart .menu-shell .menu-box ul {
+  margin-bottom: 20px;
+}
+
+.header__rightpart .menu-shell .menu-box ul li {
   list-style: none;
 }
 
-.header__rightpart .menu-shell .menu-box li a {
+.header__rightpart .menu-shell .menu-box ul li a {
   text-decoration: none;
   font-size: 14px;
   line-height: 17px;
@@ -713,7 +715,7 @@ body {
   margin-left: 54px;
 }
 
-.header__rightpart .menu-shell .menu-box li:not(:last-child) {
+.header__rightpart .menu-shell .menu-box ul li:not(:last-child) {
   margin-bottom: 11px;
 }
 
@@ -823,19 +825,20 @@ body {
 .billboard__title {
   max-width: 425px;
   border-left: 12px solid #F16D7F;
-  padding-left: 16px;
+  padding: 10px 0 11px 16px;
   margin-right: 102px;
 }
 
 .billboard__title h1 {
   font-weight: 900;
   font-size: 48px;
-  line-height: 46px;
+  line-height: 58px;
 }
 
 .billboard__title span {
   font-weight: 700;
   font-size: 32px;
+  line-height: 38px;
 }
 
 .billboard__title__fashion {
@@ -1785,12 +1788,12 @@ body {
 .cart__list > div > div h2 {
   margin-bottom: 42px;
   max-width: 210px;
+  line-height: 29px;
 }
 
 .cart__list > div > div h2 a {
   text-decoration: none;
   font-size: 24px;
-  line-height: 29px;
   color: #222222;
 }
 
@@ -2192,13 +2195,14 @@ body {
   }
   .billboard__title {
     margin-right: 0;
+    max-width: 310px;
   }
   .billboard__title h1 {
     font-weight: 900;
     font-size: 44px;
     line-height: 53px;
   }
-  .billboard__title span, .billboard__title p {
+  .billboard__title span {
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
@@ -2350,44 +2354,35 @@ body {
   }
   .billboard__title {
     margin-right: 0;
+    max-width: 262px;
   }
   .billboard__title h1 {
     font-weight: 900;
     font-size: 38px;
     line-height: 46px;
   }
-  .billboard__title span, .billboard__title p {
+  .billboard__title span {
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
   }
   .stocks {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 247px 247px 247px 111px;
+        grid-template-rows: 247px 247px 247px 111px;
+    gap: 20px;
+  }
+  .stocks__ac {
+    -ms-grid-column: 1;
+    grid-column: 1;
   }
   .stocks > a {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     width: 100%;
-    height: 180px;
+    height: 111px;
     text-decoration: none;
-    position: relative;
-    background-size: cover;
-  }
-  .stocks > a:not(:last-child) {
-    width: 100%;
-    height: 260px;
     position: relative;
     background-size: cover;
   }
@@ -2524,25 +2519,23 @@ body {
     margin-bottom: 32px;
   }
   .cart__list > div img {
-    max-height: 188px;
+    max-height: 161px;
   }
   .cart__list > div > div {
-    margin: 13px 31px 37px 17px;
+    margin: 0px 31px 37px 17px;
   }
   .cart__list > div > div h2 {
-    font-size: 16px;
-    line-height: 19px;
-    color: #222222;
     margin-bottom: 25px;
     max-width: 210px;
+    line-height: 20px;
+  }
+  .cart__list > div > div h2 a {
+    font-size: 16px;
+    color: #222222;
   }
   .cart__list > div > div p {
     font-size: 14px;
     line-height: 17px;
-    color: #575757;
-  }
-  .cart__list > div > div p span .color-price {
-    color: #F16D7F;
   }
   .cart__list > div > div p input {
     width: 24px;

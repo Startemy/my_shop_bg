@@ -20,12 +20,13 @@
         }
         &__title{
             margin-right: 0;
+            max-width: 262px; 
             & h1{
                 font-weight: 900;
                 font-size: 38px;
                 line-height: 46px;
             }
-            & span, p{
+            & span{
                 font-weight: 700;
                 font-size: 20px;
                 line-height: 24px;
@@ -34,19 +35,16 @@
     }
 
     .stocks{
-        flex-wrap: nowrap;
-        flex-direction: column;
-        
+        @include margtb(64,64);
+        grid-template-columns: 1fr;
+        grid-template-rows: 247px 247px 247px 111px;
+        gap: 20px;
+        &__ac{
+            grid-column: 1;
+        }
         & > a{
-            &:not(:last-child){
             width: 100%;
-            height: 260px;
-            position: relative;
-            background-size: cover;
-            }
-            @include alignment(center,center);
-            width: 100%;
-            height: 180px;
+            height: 111px;
             text-decoration: none;
             position: relative;
             background-size: cover;
@@ -156,25 +154,24 @@
                 margin-right: 9px;
                 margin-bottom: 32px;
                 & img{
-                    max-height: 188px;
+                    max-height: 161px;
                 }
                 /////Описание товара//////
                 & > div{
-                    margin: 13px 31px 37px 17px;
+                    margin: 0px 31px 37px 17px;
                     & h2{
-                        font-size: 16px;
-                        line-height: 19px;
-                        color: #222222;
                         margin-bottom: 25px;
                         max-width: 210px;
+                        line-height: 20px;
+                        & a{
+                        font-size: 16px;
+                        color: #222222;
+                        
+                        }
                     }
                     & p{
                         font-size: 14px;
                         line-height: 17px;
-                        color: #575757;
-                        & span .color-price{
-                            color: $brand-color;
-                        }
                         & input{
                             width: 24px;
                             text-align: center;

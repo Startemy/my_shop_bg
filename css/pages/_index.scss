@@ -13,16 +13,17 @@
     &__title{
         max-width: 425px;
         border-left: 12px solid $brand-color;
-        padding-left: 16px;
+        padding: 10px 0 11px 16px;
         margin-right: 102px;
         & h1{
             font-weight: 900;
             font-size: 48px;
-            line-height: 46px;
+            line-height: 58px;
         }
         & span{
             font-weight: 700;
             font-size: 32px;
+            line-height: 38px;
         }
         &__fashion {
             color: $brand-color;

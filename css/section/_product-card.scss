@@ -13,7 +13,7 @@
         margin-bottom: 48px;
     }
     & section{
-        display: flex;
+        @include alignment(center, center);
         gap: 30px;
         flex-wrap: wrap;
         & > div{
@@ -24,17 +24,17 @@
     //--------Появляющееся затемнение с кнопкой корзина----------//
     &__img{
         position: relative;
-        height: 420px;
-        width: 360px;
+        @include size(420px,360px);
         & > a{
             position: absolute;
+            cursor: url(https://ani.cursors-4u.net/toons/too-12/too1117.ani), url(https://ani.cursors-4u.net/toons/too-12/too1117.png), auto !important;
             @include size(100%,100%);
         }
         & form{ 
             //Кнопка добавить в корзину появляющаяся////
             & > button{
                 @include alignment(center, center);
-                @include size(139,44);
+                @include size(139px,44px);
                 border: 1px solid white;
                 background-color: transparent;
                 position: absolute;
@@ -90,7 +90,7 @@
         }
         & p{
             @include font-desc(normal,#5D5D5D);
-            margin: 13px 0 18px 0;
+            @include margtb(13,18);
         }
         & strong{
             font-size: 16px;

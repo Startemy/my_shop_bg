@@ -36,6 +36,7 @@
     .stocks{
         flex-wrap: nowrap;
         flex-direction: column;
+        
         & > a{
             &:not(:last-child){
             width: 100%;
@@ -197,5 +198,34 @@
                 @include btn-cart(14,17,13,175,33,black);
             }
         }
+    }
+
+    .registration{
+        flex-direction: column;
+        align-items: center;
+        & .gender{
+            & i{
+                &.other{
+                    display: block;
+                    @include alignment(flex-start,center);
+                }
+            }
+        }
+        & .loyality{
+            max-width: 368px;
+            margin-top: -59px;
+            font-size: 16px;
+            line-height: 19px;
+            & h3{
+                font-size: 16px;
+                line-height: 19px;
+            }
+            &  p{
+                @include margtb(32,22);
+            }
+            & li:not(:last-child){
+                margin-bottom: 16px;
+            }
+        }   
     }
 }

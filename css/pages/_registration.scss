@@ -3,6 +3,7 @@
     @include margtb(64,96);
     & .reg-form{
         max-width: 360px;
+        margin-right: 20px;
     }
     & .gender{
         @include alignment(flex-start,center);
@@ -14,8 +15,11 @@
             font-size: 11px;
             line-height: 13px;
             font-style: normal;
+            &.other{
+                display: none;
+            }
         }
-        & i:nth-child(1){
+        & i:not(:last-child){
             margin-right: 20px;
         }
         & input{
@@ -25,7 +29,6 @@
     }
     & .loyality{
         max-width: 650px;
-        margin-left: 128px;
         font-weight: 300;
         font-size: 24px;
         line-height: 29px;
@@ -42,6 +45,9 @@
         }
         & li{
             list-style: none;
+            list-style-position: outside;
+            margin-left: 45px;
+            text-indent: -43px;
         }
         & li::before{
             content: url(../image/icons/check_mark.svg);
@@ -49,7 +55,7 @@
         }
     }   
     & .button__join{
-        @include botton($brand-color,$brand-color,167,50,39,42);
+        @include botton($brand-color,$brand-color,167px,50px,39,42);
         align-self: flex-start;
         & svg{
             margin-left: 20px;

@@ -6,6 +6,7 @@
     max-width: 1600px;
     margin: 0 auto;
     position: relative;
+    z-index: 1;
     &__img{
         max-width: 100%;
 
@@ -34,6 +35,7 @@
 .desc-prod{  ///Ждать урока как сделать без position
     margin-top: -60px;
     position: relative;
+    z-index: 2;
     &__box{
         display: flex;
         align-items: center;
@@ -45,14 +47,14 @@
             font-size: 14px;
             line-height: 17px;
             color: $brand-color;
-            margin: 64px 0 12px 0;
+            @include margtb(64,12);
         }
         & h3{         
             font-weight: 300;
             font-size: 18px;
             line-height: 22px;
             color: #4D4D4D;
-            margin: 12px 0 48px 0;
+            @include margtb(12,48);
         }
         & p{
             @include font-desc(300,#5E5E5E);
@@ -65,7 +67,7 @@
             font-size: 24px;
             line-height: 29px;
             color: $brand-color;
-            margin: 32px 0 64px 0;
+            @include margtb(32,64);
         }
     }
     &__red-line{
@@ -77,17 +79,15 @@
         border: 1px solid #EAEAEA;
         background-color: #EAEAEA;
         width: 642px;
-        margin-bottom: 64px
+        margin-bottom: 64px;
     }
     &__btm-cart{      //Кнопка продукта добавить в корзину
-        @include alignment(center,center);
         text-decoration: none;
-        width: 212px;
-        height: 48px;
+        @include alignment(center,center);
+        @include size(212px,48px);
         border: 1px solid $brand-color;
         background-color: transparent;
-        margin-bottom: 64px;
-        margin-top: 48px;
+        @include margtb(48,64);
     }
     &__btm-img{
         width: 26px;

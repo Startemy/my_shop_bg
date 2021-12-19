@@ -3,7 +3,7 @@
     .billboard{
         &__flex{
             background-size: contain;
-            background-position: -110px bottom;
+            background-position: 100px bottom;
         }
         &__title{
         margin-right: 0; 
@@ -26,25 +26,11 @@
     }
     .stocks{
         @include margtb(20,154);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 168px 116px;
         gap: 20px;
-        & > a{
-            &:not(:last-child){
-            @include alignment(center,center);
-            width: 31.46%;
-            height: 168px;
-            position: relative;
-            background-size: cover;
-            }
-            @include alignment(center,center);
-            width: 100%;
-            height: 116px;
-            text-decoration: none;
-            position: relative;
-            background-size: cover;
-        }
-        &--width{
-            width: 60%;
-        }
+
+
     }
     .product-card{
         & section{
@@ -90,7 +76,6 @@
 
     ////////CART////////
     .form{
-        margin-top: 64px;
         @include alignment(center,center);
         gap: 15px;
         & > div:nth-child(2){
@@ -99,5 +84,30 @@
     }
     .cart{
         @include alignment(center,center);
+    }
+
+    .registration{
+        & .gender{
+            & i{
+                &.other{
+                    display: block;
+                    @include alignment(flex-start,center);
+                }
+            }
+        }
+        & .loyality{
+            font-size: 16px;
+            line-height: 19px;
+            & h3{
+                font-size: 16px;
+                line-height: 19px;
+            }
+            &  p{
+                @include margtb(32,22);
+            }
+            & li:not(:last-child){
+                margin-bottom: 16px;
+            }
+        }   
     }
 }

@@ -39,7 +39,7 @@
             color: #B1B1B1;
         }  
         & button{
-            @include btn-cart(11,13,23,100,35, #4A4A4A);
+            @include btn-cart(11,13,23,100px,35px, #4A4A4A);
         }
     }
     
@@ -82,7 +82,7 @@
                 
             }
             & button{
-                @include botton($brand-color,$brand-color,273,50,17,42);
+                @include botton($brand-color,$brand-color,273px,50px,17,42);
             }
         }
     } 

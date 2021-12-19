@@ -8,7 +8,7 @@
         height: 100%;
         background: url('../image/man_on_head.png') no-repeat;
         background-size: contain;
-        background-position: -212px bottom;
+        background-position: left bottom;
     } 
     &__title{
         max-width: 425px;
@@ -31,19 +31,20 @@
 }
 //////////////Секция Акции/////////////
 .stocks{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 260px 180px;
     gap: 30px;
     @include margtb(65,96);
     & > a{
         &:not(:last-child){
         @include alignment(center,center);
-        @include size(31.58%,260px);
+        @include size(100%,100%);
         position: relative;
         background-size: cover;
         }
         @include alignment(center,center);
-        @include size(100%,180px);
+        @include size(100%,100%);
         text-decoration: none;
         position: relative;
         background-size: cover;
@@ -54,8 +55,7 @@
         ////Затемнение/////
         &::before{
             content: '';
-            width: 100%;
-            height: 100%;
+            @include size(100%,100%);
             position: absolute;
             background-color:#211616;
             opacity: 0.7;
@@ -73,6 +73,7 @@
     }
     &__ac{
         background-image: url('../image/fast_menu/accesorise.jpg');
+        grid-column: 1 / 4;
     }
     ///Подписи на акциии//////
     & p{

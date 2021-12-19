@@ -17,11 +17,15 @@
             & > div{
                 margin: 22px 97px 64px 31px;
                 & h2{
+                    margin-bottom: 42px;
+                    max-width: 210px;
+                    & a{
+                    text-decoration: none;
                     font-size: 24px;
                     line-height: 29px;
                     color: #222222;
-                    margin-bottom: 42px;
-                    max-width: 210px;
+                    
+                    }
                 }
                 & p{
                     font-size: 22px;
@@ -64,7 +68,7 @@
         display: flex;
         justify-content: space-between;
         & button{
-            @include btn-cart(14,17,13,235,50,black);
+            @include btn-cart(14,17,13,235px,50px,black);
         }
     }
 }

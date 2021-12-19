@@ -1047,7 +1047,7 @@ body {
 .filter__space {
   padding-left: 16px;
   padding-top: 13px;
-  width: 360px;
+  max-width: 360px;
   position: absolute;
   z-index: 1;
   left: 0%;
@@ -1748,9 +1748,9 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: none;
-      -ms-flex-align: none;
-          align-items: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 96px;
   margin-bottom: 128px;
   -ms-flex-wrap: wrap;
@@ -2300,6 +2300,9 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
+  .cart__list-btnbox {
+    margin-bottom: 64px;
+  }
   .registration .gender i.other {
     display: block;
     display: -webkit-box;
@@ -2487,6 +2490,9 @@ body {
     font-size: 10px;
     line-height: 12px;
   }
+  .filter__exception-flex--space {
+    right: 0px;
+  }
   .desc-prod {
     margin-top: 0;
   }
@@ -2508,6 +2514,9 @@ body {
   }
   .cart {
     margin-top: 39px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .cart__list {
     max-width: 375px;
@@ -2558,8 +2567,8 @@ body {
     line-height: 17px;
     color: black;
     cursor: pointer;
-    width: 175;
-    height: 33;
+    width: 175px;
+    height: 33px;
     margin-top: 13px;
   }
   .registration {
@@ -2570,6 +2579,8 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-top: -8px;
+    margin-bottom: 96px;
   }
   .registration .gender i.other {
     display: block;

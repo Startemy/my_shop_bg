@@ -39,7 +39,7 @@
             gap: 16px;
         }
     }
-    
+
     .footer{
         & .footer-top{
                 height: 610px;
@@ -87,6 +87,9 @@
     }
     .cart{
         @include alignment(center,center);
+        &__list-btnbox{
+            margin-bottom: 64px;
+        }
     }
 
     .registration{

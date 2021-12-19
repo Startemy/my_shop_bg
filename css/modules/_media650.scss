@@ -121,6 +121,11 @@
                 }
             }
         }
+        &__exception-flex{
+            &--space{
+                right: 0px;
+            }
+        }
     }
 
     //////PRODUCT//////
@@ -146,6 +151,7 @@
     }
     .cart{
         margin-top: 39px;
+        justify-content: center;
         &__list{
             max-width: 375px;
             & > div{
@@ -192,7 +198,7 @@
         }
         &__list-btnbox{
             & button{
-                @include btn-cart(14,17,13,175,33,black);
+                @include btn-cart(14,17,13,175px,33px,black);
             }
         }
     }
@@ -200,6 +206,7 @@
     .registration{
         flex-direction: column;
         align-items: center;
+        @include margtb(-8,96);
         & .gender{
             & i{
                 &.other{

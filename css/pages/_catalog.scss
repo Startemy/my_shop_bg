@@ -65,7 +65,7 @@ position: relative;
     &__space{
         padding-left: 16px;
         padding-top: 13px;
-        width: 360px;
+        max-width: 360px;
         position: absolute;
         z-index: 1;
         left: 0%;

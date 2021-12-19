@@ -1,5 +1,5 @@
 .cart{
-    @include alignment(space-between,none);
+    @include alignment(space-between,center);
     @include margtb(96,128);
     flex-wrap: wrap;
     &__list{

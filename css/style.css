@@ -1836,7 +1836,7 @@ body {
 }
 
 .cart__list > div button img {
-  width: 9px;
+  width: 18px;
 }
 
 .cart__list-btnbox {
@@ -2561,6 +2561,9 @@ body {
   }
   .cart__list > div button {
     margin: 17px 12px 260px 0;
+  }
+  .cart__list > div button img {
+    width: 9px;
   }
   .cart__list-btnbox button {
     background: none;

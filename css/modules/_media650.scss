@@ -164,7 +164,7 @@
                 }
                 /////Описание товара//////
                 & > div{
-                    margin: 0px 31px 37px 17px;
+                    margin: 10px 40px 37px 17px;
                     & h2{
                         margin-bottom: 25px;
                         max-width: 210px;
@@ -193,6 +193,9 @@
                             }
                         }
                     }
+                }
+                & button{
+                    margin: 17px 12px 260px 0;
                 }
             }
         }

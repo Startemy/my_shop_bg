@@ -1803,7 +1803,7 @@ body {
   color: #575757;
 }
 
-.cart__list > div > div p span .color-price {
+.cart__list > div > div p span.color-price {
   color: #F16D7F;
 }
 
@@ -2531,7 +2531,7 @@ body {
     max-height: 161px;
   }
   .cart__list > div > div {
-    margin: 0px 31px 37px 17px;
+    margin: 10px 40px 37px 17px;
   }
   .cart__list > div > div h2 {
     margin-bottom: 25px;
@@ -2558,6 +2558,9 @@ body {
   }
   .cart__list > div > div p input::-webkit-outer-spin-button, .cart__list > div > div p input::-webkit-inner-spin-button {
     -webkit-appearance: none;
+  }
+  .cart__list > div button {
+    margin: 17px 12px 260px 0;
   }
   .cart__list-btnbox button {
     background: none;

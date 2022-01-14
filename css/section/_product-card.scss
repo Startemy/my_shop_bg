@@ -30,51 +30,55 @@
             cursor: default;
             @include size(100%,100%);
         }
-        & form{ 
-            //Кнопка добавить в корзину появляющаяся////
-            & > button{
-                @include alignment(center, center);
-                @include size(139px,44px);
-                border: 1px solid white;
-                background-color: transparent;
-                position: absolute;
-                z-index: 2;
-                top:45%;
-                left: 33%;
-                cursor: pointer;
-                opacity: 0%;
-                font-size: 14px;
-                line-height: 17px;
-                color: #FFFFFF;
-                font-family: 'Lato', sans-serif;
-                margin: 0;
-                & img{
-                    width: 26px;
-                    margin-right: 11px;
-                }
+        & > button{
+            @include alignment(center, center);
+            @include size(139px,44px);
+            border: 1px solid white;
+            background-color: transparent;
+            position: absolute;
+            z-index: 2;
+            top:45%;
+            left: 33%;
+            cursor: pointer;
+            opacity: 0%;
+            font-size: 14px;
+            line-height: 17px;
+            color: #FFFFFF;
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            & img {
+                width: 26px;
+                margin-right: 11px;
             }
         }
+
         ///затемнение картинки//////
-        &:hover > a{
+        &:hover > a {
             z-index: 1;
         }
-        &:hover button{ ///появление кнопки корзина при наведении на крточку
+        &:hover > button{ ///появление кнопки корзина при наведении на крточку
             animation: 2s opacity-btn;
             animation-delay: 1s;
             animation-fill-mode: forwards;
         }
-        &:hover{
-            animation: 1s card-shadow;
-            animation-fill-mode: forwards;
-        }  
-        &:hover > ::before{
+        &:hover::before{
             animation: 2s dark;
             content: ' ';
             background-color: #3A3838;
             @include size(100%,100%);
             position: absolute;
             animation-fill-mode: forwards;
+            z-index: 2;
+            display: block;
         } 
+        &:hover{
+            animation: 1s card-shadow;
+            animation-fill-mode: forwards;
+        }  
+    }
+    &__imgstr{
+        display: block;
+
     }
     //-----------Описание продукта--------------//
     & article{

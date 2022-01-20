@@ -1,0 +1,125 @@
+.product-card{
+    @include alignment(center, center);
+    flex-direction: column;
+    & h2{
+        font-size: 30px;
+        line-height: 36px;
+        color: #222222;
+    }
+    & p{
+        font-size: 14px;
+        line-height: 17px;
+        color: #9F9F9F;
+        margin-bottom: 48px;
+    }
+    & section{
+        @include alignment(center, center);
+        gap: 30px;
+        flex-wrap: wrap;
+        & > div{
+            max-width: 360px;
+            min-height: 360px;
+        }
+    }
+    //--------Появляющееся затемнение с кнопкой корзина----------//
+    &__img{
+        position: relative;
+        @include size(360px,420px);
+        & > a{
+            position: absolute;
+            cursor: default;
+            @include size(100%,100%);
+        }
+        & > button{
+            @include alignment(center, center);
+            @include size(139px,44px);
+            border: 1px solid white;
+            background-color: transparent;
+            position: absolute;
+            z-index: 2;
+            top:45%;
+            left: 33%;
+            cursor: pointer;
+            opacity: 0%;
+            font-size: 14px;
+            line-height: 17px;
+            color: #FFFFFF;
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            & img {
+                width: 26px;
+                margin-right: 11px;
+            }
+        }
+
+        ///затемнение картинки//////
+        &:hover > a {
+            z-index: 1;
+        }
+        &:hover > button{ ///появление кнопки корзина при наведении на крточку
+            animation: 2s opacity-btn;
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+        }
+        &:hover::before{
+            animation: 2s dark;
+            content: ' ';
+            background-color: #3A3838;
+            @include size(100%,100%);
+            position: absolute;
+            animation-fill-mode: forwards;
+            z-index: 2;
+            display: block;
+        } 
+        &:hover{
+            animation: 1s card-shadow;
+            animation-fill-mode: forwards;
+        }  
+    }
+    &__imgstr{
+        display: block;
+
+    }
+    //-----------Описание продукта--------------//
+    & article{
+    padding: 25px 29px 20px 16px;
+    text-align: left;
+        & h2{
+            & > a{
+                text-decoration: none;
+                font-size: 13px;
+                line-height: 16px;
+                color: #000000;
+            }
+        }
+        & p{
+            @include font-desc(normal,#5D5D5D);
+            @include margtb(13,18);
+        }
+        & strong{
+            font-size: 16px;
+            line-height: 19px;
+            color:$brand-color;
+        }
+    }
+    
+    //--------Кнопка Смотреть все продукты---------------//
+    & nav{
+        @include margtb(63,95);
+        & a{
+            color: $brand-color;
+            border: 1px solid $brand-color;
+            padding: 14px 38px;
+            font-size: 16px;
+            line-height: 19px;
+            text-decoration: none;
+        }
+        &:hover a{
+            background-color: $brand-color;
+            color: white;
+        }
+    }
+    &--mrg{
+        @include margtb(128,128);
+    }
+}

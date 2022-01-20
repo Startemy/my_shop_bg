@@ -9,28 +9,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <script src="js/main.js"></script>
-    <title>BrandShop by Startemy</title>
+    <title>BrandShop Cart</title>
 </head>
 
 <body>
     <header class="header">
-        <section class="container">
+        <section id="header" class="container">
             <nav>
                 <ul class="header__leftpart">
                     <li>
-                        <a href="index.html">
-                            <img src="./image/head/logo.png" alt="logo">
+                        <a href="../index.html">
+                            <img src="../image/head/logo.png" alt="logo">
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <img src="./image/head/find.svg" alt="find">
+                            <img src="../image/head/find.svg" alt="find">
                         </a>
                     </li>
                 </ul>
-                <ul class="header__rightpart header__quantity-pos">
+                <ul class="header__rightpart">
                     <li>
                         <input class="burger-input" id="burger" type="checkbox">
                         <label class="gamburger" for="burger">
@@ -38,7 +38,7 @@
                             <span></span>
                             <span></span>
                         </label>
-                        <div class="menu-shell hidden">
+                        <div class="menu-shell">
                             <div class="menu-box">
                                 <h2>MENU</h2>
                                 <h3>MAN</h3>
@@ -67,103 +67,123 @@
                                 </ul>
                                 <h3>NAVIGATION</h3>
                                 <ul>
-                                    <li><a href="views/catalog.html">Catalog</a></li>
-                                    <li><a href="views/cart.html">Cart</a></li>
-                                    <li><a href="views/registration.html">Registation</a></li>
+                                    <li><a href="../views/catalog.html">Catalog</a></li>
+                                    <li><a href="../views/cart.html">Cart</a></li>
+                                    <li><a href="../views/registration.html">Registation</a></li>
                                 </ul>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <a href="views/registration.html">
-                            <img src="./image/head/login_logo.svg" alt="login_logo">
+                        <a href="registration.html">
+                            <img src="../image/head/login_logo.svg" alt="login_logo">
                         </a>
                     </li>
-                    <li>
-                        <a href="views/cart.html">
-                            <img src="./image/head/cart_logo.svg" alt="cart_logo">
+                    <li class="header__quantity-pos">
+                        <a href="cart.html">
+                            <img src="../image/head/cart_logo.svg" alt="cart_logo">
+                            <div>5</div>
                         </a>
                     </li>
-                    <div class='quant'>0</div>
-                    <div class='cart_preview'>
-                        <ul>
-                            <li>Наименование товара</li>
-                            <li>Количество</li>
-                            <li>Цена за шт.</li>
-                            <li>Итого</li>
-                        </ul>
-                        <p>Итого в корзине на сумму:$<span class="ttl_price"></span></p>
-                    </div>
                 </ul>
             </nav>
         </section>
     </header>
-    <main class="main">
-        <section class="billboard">
-            <div class="billboard__flex container">
-                <div class="billboard__title">
-                    <h1>THE BRAND
-                        <span>OF&nbsp;LUXERIOUS
-                            <span class="billboard__title__fashion">FASHION</span>
-                        </span>
-                    </h1>
-                </div>
-            </div>
-        </section>
-        <section>
-            <nav class="stocks container">
-                <a href="#" class="stocks__fw">
-                    <p class="stocks--width">30% off <span> for&nbsp;women</span></p>
-                </a>
-                <a href="#" class="stocks__fm">
-                    <p class="stocks--width">hot deal <span>for&nbsp;men</span></p>
-                </a>
-                <a href="#" class="stocks__fk">
-                    <p class="stocks--width">new arrivals <span>for&nbsp;kids</span></p>
-                </a>
-                <a href="#" class="stocks__ac">
-                    <p class="stocks--width-ac">luxirous & trendy <span>accesories</span></p>
-                </a>
-            </nav>
-        </section>
-        <section class="product-card container">
-            <h2>Fetured Items</h2>
-            <p>Shop for items based on what we featured in this week</p>
-            <section class='products'>
+    <section id="page-title" class="page-title">
+        <div class="page-title__heading container">
+            <p>SHOPPING CART</p>
+        </div>
+    </section>
 
+    <main class="main">
+        <section class="main__grow">
+            <section class="cart container">
+                <section class="cart__list">
+                    <div>
+                        <a href="prоduct.html">
+                            <img src="../image/orders/for_man/man_shirt.png" alt="product_4">
+                        </a>
+                        <div>
+                            <h2><a href="../views/prоduct.html">MANGO PEOPLE T-SHIRT</a></h2>
+                            <p>Price:
+                                <span class="color-price">$2954.00</span>
+                            </p>
+                            <p>Colore:
+                                <span>blue</span>
+                            </p>
+                            <p>Size:
+                                <span>XL</span>
+                            </p>
+                            <p>Quantity:
+                                <input type="number" min="1" max="10" name="quantity__cart" value="1">
+                            </p>
+                        </div>
+                        <!--Кнопку удалить товар лучше позишном или мерджином-->
+                        <form action="#">
+                            <button>
+                                <img src="../image/icons/X.svg" alt="close">
+                            </button>
+                        </form>
+                    </div>
+
+                    <div>
+                        <a href="prоduct.html">
+                            <img src="../image/orders/for_man/green_shirt.png" alt="product_4">
+                        </a>
+                        <div>
+                            <h2><a href="../views/prоduct.html">MANGO PEOPLE T-SHIRT</a></h2>
+                            <p>Price:
+                                <span class="color-price">$2954.00</span>
+                            </p>
+                            <p>Colore:
+                                <span>blue</span>
+                            </p>
+                            <p>Size:
+                                <span>XL</span>
+                            </p>
+                            <p>Quantity:
+                                <input type="number" min="1" max="10" name="quantity__cart" value="1">
+                            </p>
+                        </div>
+                        <!--Кнопку удалить товар лучше позишном или мерджином-->
+                        <form action="#">
+                            <button>
+                                <img src="../image/icons/X.svg" alt="close">
+                            </button>
+                        </form>
+                    </div>
+                    <form class="cart__list-btnbox">
+                        <button>CLEAR SHOPPING CART</button>
+                        <button>CONTINUE SHOPPING</button>
+                    </form>
+                </section>
+                <section id="shipping-form">
+                    <form class="form" action="#">
+                        <div>
+                            <h2>SHIPPING ADRESS</h2>
+                            <input type="text" placeholder="Bangladesh">
+                            <input type="text" placeholder="State">
+                            <input type="number" placeholder="Postcode/Zip">
+                            <button>GET A QUOTE</button>
+                        </div>
+                        <div>
+                            <div>
+                                <p>SUB TOTAL<span>$900</span></p>
+                                <p class="grand">GRAND TOTAL <span>$900</span></p>
+                                <div></div>
+                                <button>PROCEEDTO CHECKOUT</button>
+                            </div>
+                        </div>
+                    </form>
+                </section>
             </section>
-            <nav class="proposal__btn-catalog">
-                <a href="views/catalog.html">Browse All Product</a>
-            </nav>
         </section>
     </main>
     <section class="footer">
-        <section class="footer-top">
-            <div class="footer-top__box container">
-                <div>
-                    <img src="image/Feature/delivery_logo.svg" alt="delivery">
-                    <h3>Free Delivery</h3>
-                    <p>Worldwide delivery on all. Authorit tively morph next-generation
-                        innov tion with extensive models.</p>
-                </div>
-                <div>
-                    <img src="image/Feature/sale_logo.svg" alt="sale">
-                    <h3>Sales & discounts</h3>
-                    <p>Worldwide delivery on all. Authorit tively morph next-generation
-                        innov tion with extensive models.</p>
-                </div>
-                <div>
-                    <img src="image/Feature/acces_logo.svg" alt="sale">
-                    <h3>Quality assurance</h3>
-                    <p>Worldwide delivery on all. Authorit tively morph next-generation
-                        innov tion with extensive models.</p>
-                </div>
-            </div>
-        </section>
         <section class="footer-mdl">
             <div class="footer-mdl__box container">
                 <div class="footer-mdl__intersec">
-                    <img src="image/Round_wom.jpg" alt="round">
+                    <img src="../image/Round_wom.jpg" alt="round">
                     <p>“Vestibulum quis porttitor dui! Quisque viverra nunc mi,
                         <span>a pulvinarpurus condimentum“</span>
                     </p>

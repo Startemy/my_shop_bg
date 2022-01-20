@@ -1,0 +1,233 @@
+@keyframes signboard {
+    0%{
+        transform: rotateX(0deg);
+    }
+    35%{
+        transform-origin: top;
+        transform: rotateX(45deg);
+        transform: skewX(2deg);
+    }
+    60%{
+        transform: rotateX(-45deg);
+        transform: skewX(-2deg);
+        transform-origin: top;
+        animation-delay: 1s;
+        box-shadow: -5px 10px 14px -5px rgba(34, 60, 80, 0.2);
+    }
+    90%{
+        transform-origin: top;
+        transform: rotateX(-15deg);
+        transform: skewX(2deg);
+    }
+    100%{
+        transform-origin: top;
+        transform: rotateX(0);
+        transform: skewX(0);
+    }
+}
+@keyframes opacity-btn {
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+    
+}
+@keyframes card-shadow {
+    0%{
+        transform: scale(1);
+        box-shadow: 0px 0px 0px 0px rgba(34, 60, 80, 0.5);
+    }
+    100%{
+        transform: scale(1.05);
+        box-shadow: 6px 6px 10px 0px rgba(34, 60, 80, 0.5);
+    } 
+}
+
+@keyframes dark {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 86%;
+    }
+}
+
+@keyframes gamburger-top {
+    0%{
+        transform:translate(0px) rotate(0deg);
+    }
+    100%{
+        transform:translate(130px, 75px) rotate(45deg);
+        border: 1px solid #6F6E6E;
+        background-color: #6F6E6E;
+        border-radius: 5px;
+        cursor: pointer;
+        @include size(20px,20px);
+        z-index: 4;
+    }
+}
+    @media (max-width:699px),(max-height:699px){
+        @keyframes gamburger-top {
+            0%{
+                transform:translate(0px) rotate(0deg);
+                z-index: 4;
+            }
+            100%{
+                transform:translate(50px, 75px) rotate(45deg);
+                border: 1px solid #6F6E6E;
+                background-color: #6F6E6E;
+                border-radius: 5px;
+                cursor: pointer;
+                @include size(20px,20px);
+                z-index: 4;
+            }
+        }
+    }
+
+@keyframes gamburger-mdl {
+    0%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+    }
+}
+    @media (max-width:699px),(max-height:699px){
+        @keyframes gamburger-mdl {
+            0%{
+                opacity: 100%;
+            }
+            100%{
+                opacity: 0%;
+            }
+        }
+    }
+
+@keyframes gamburger-btm {
+    0%{
+        transform:translate(0px) rotate(0deg);
+    }
+    100%{
+        transform:translate(130px, 54.5px) rotate(-45deg);
+        border: 1px solid #6F6E6E;
+        background-color: #6F6E6E;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 4;
+        @include size(20px,20px);
+    }
+}
+    @media (max-width:699px),(max-height:699px){
+        @keyframes gamburger-btm {
+            0%{
+                transform:translate(0px) rotate(0deg);
+                z-index: 4;
+            }
+            100%{
+                transform:translate(50px, 54.5px) rotate(-45deg);
+                border: 1px solid #6F6E6E;
+                background-color: #6F6E6E;
+                border-radius: 5px;
+                cursor: pointer;
+                z-index: 4;
+                @include size(20px,20px);
+            }
+        }
+    }
+
+
+@keyframes gamburger-top-rev {
+    0%{
+        transform:translate(130px, 75px) rotate(45deg);
+        @include size(20px,20px);
+        z-index: 4;
+    }
+    100%{
+        transform:translate(0px) rotate(0deg);
+        z-index: 4;
+    }
+}
+    @media (max-width:699px),(max-height:699px){
+        @keyframes gamburger-top-rev {
+            0%{
+                transform:translate(50px, 75px) rotate(45deg);
+                @include size(20px,20px);
+                z-index: 4;
+            }
+            100%{
+                transform:translate(0px) rotate(0deg);
+                z-index: 4;
+            }
+        }
+    }
+
+@keyframes gamburger-btm-rev {
+    0%{
+        transform:translate(130px, 54.5px) rotate(-45deg);
+        @include size(20px,20px);
+        z-index: 4;   
+    }
+    100%{
+        transform:translate(0px) rotate(0deg);
+        z-index: 4;
+    }
+}
+    @media (max-width:699px),(max-height:699px){
+        @keyframes gamburger-btm-rev {
+            0%{
+                transform:translate(50px, 54.5px) rotate(-45deg);
+                @include size(20px,20px); 
+                z-index: 4; 
+            }
+            100%{
+                transform:translate(0px) rotate(0deg);
+                z-index: 4;
+            }
+        }
+
+    }
+
+@keyframes gamburger-mdl-rev {
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+@media (max-width:699px),(max-height:699px){
+    @keyframes gamburger-mdl-rev {
+        0%{
+            opacity: 0%;
+        }
+        100%{
+            opacity: 100%;
+        }
+    }
+}
+
+@keyframes menu-visible{
+    0%{
+        transform: translateX(0);
+        z-index: 3;
+    }
+    100%{
+        transform: translateX(-232px);
+        z-index: 3;
+    }
+}
+
+
+@keyframes menu-invisible{
+    0%{
+        transform: translateX(-232px);
+        opacity: 100%;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 0;
+        z-index: 1;
+    }
+}

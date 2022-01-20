@@ -1,0 +1,108 @@
+
+//////////////Секция Билбор///////////
+.billboard{
+    background-color: #F1E4E6;
+    height: calc(100vh - 79px);
+    &__flex{
+        @include alignment(flex-end,center);
+        height: 100%;
+        background: url('../image/man_on_head.png') no-repeat;
+        background-size: contain;
+        background-position: left bottom;
+    } 
+    &__title{
+        max-width: 425px;
+        border-left: 12px solid $brand-color;
+        padding: 10px 0 11px 16px;
+        margin-right: 102px;
+        & h1{
+            font-weight: 900;
+            font-size: 48px;
+            line-height: 58px;
+        }
+        & span{
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 38px;
+        }
+        &__fashion {
+            color: $brand-color;
+        }
+    }        
+}
+//////////////Секция Акции/////////////
+.stocks{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 260px 180px;
+    gap: 30px;
+    @include margtb(65,96);
+    & > a{
+        &:not(:last-child){
+        @include alignment(center,center);
+        @include size(100%,100%);
+        position: relative;
+        background-size: cover;
+        }
+        @include alignment(center,center);
+        @include size(100%,100%);
+        text-decoration: none;
+        position: relative;
+        background-size: cover;
+        ///Анимация////
+        &:hover{
+            animation: 1s signboard; 
+        }
+        ////Затемнение/////
+        &::before{
+            content: '';
+            @include size(100%,100%);
+            position: absolute;
+            background-color:#211616;
+            opacity: 0.7;
+            }
+    }
+    ////Картинки////
+    &__fw{
+        background-image: url('../image/fast_menu/for_women.jpg');
+        }
+    &__fm{
+    background-image: url('../image/fast_menu/for_men.jpg');
+    }
+    &__fk{
+        background-image: url('../image/fast_menu/for_kids.jpg');
+    }
+    &__ac{
+        background-image: url('../image/fast_menu/accesorise.jpg');
+        grid-column: 1 / 4;
+    }
+    ///Подписи на акциии//////
+    & p{
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        color: #FFFFFF;
+        position: absolute;
+        & > span{
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 29px;
+            color: $brand-color;
+        }
+    }
+    /////Ширина подписей//////
+    &--width{
+        width: 50%;
+    }
+    &--width-ac{
+        width: 25%;
+    }
+}
+
+
+
+
+
+
+

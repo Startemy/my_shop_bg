@@ -1,0 +1,129 @@
+.footer{
+    & .footer-top{
+        background: #222224;
+        height: 341px;
+        @include alignment(center,center);
+        &__box{
+            @include alignment(center,center);
+            & > div{
+                max-width: 360px;
+                text-align: center;
+                & h3{
+                    font-weight: 400;
+                    font-size: 19.96px;
+                    line-height: 24px;
+                    color: #FBFBFB;
+                    margin: 28px 0 16px 0;
+                }
+                & p{
+                    padding: 0 27px 0 27px;
+                    font-weight: 300;
+                    font-size: 13.972px;
+                    line-height: 17px;
+                    text-align: center;
+                    color: #FBFBFB;
+                }
+            }
+        } 
+    }
+    /////////FOOTER CENTER/////////////////
+    .footer-mdl{
+        background: url('../image/surf.jpg') no-repeat center;
+        background-size: cover;
+        position: relative;
+        &::before{
+            content: ' ';
+            background-color: white;
+            opacity: 0.6;
+            @include size(100%,100%);
+            position: absolute;
+        }
+        &__box{
+            @include alignment(space-between, center);
+            min-height: 448px;
+            position: relative;
+        }
+        &__intersec{
+            width: 360px;
+            text-align: center;
+            & img{
+                border-radius: 100px; 
+                width: 96px;
+            }
+            & p {
+                font-size: 20px;
+                line-height: 24px;
+                text-align: center;
+                color: #222224;
+            }
+            & span{
+                font-style: italic;
+            }
+        }
+        &__subscribe{
+            @include alignment(center,center);
+            width: 557px;
+            flex-direction: column;
+            & h2{
+                font-size: 24px;
+                line-height: 167.2%;
+                color: #222224;
+            }
+            & p{
+                font-size: 18px;
+                line-height: 167.2%;
+                color: #222224;
+                margin-bottom: 32px;
+            } 
+            & input{
+                background: #E1E1E1;
+                @include size(256px,49px);
+                border-radius: 25px 0 0 25px;
+                border: none;
+                outline: none;
+                padding-left: 22px;
+            }
+            & .btn{
+                background: $brand-color;
+                width: 100px;
+                border-radius: 0 25px 25px 0;
+                color:white;
+                text-align: center;
+                cursor: pointer;
+                padding-left: 0;
+            }
+        }
+    }
+
+    ////////////FOOTER BOTTOM///////////////////////
+    .footer-botom{
+        background: #222224;
+        &__box{
+            @include alignment(space-between, center);
+            height: 79px;
+            & p{
+                color: white;
+            }
+            & ul{
+                display: flex;
+                & li{
+                    list-style: none;
+                    &:not(:last-child){
+                        margin-right: 7px;
+                    }
+                    & a{
+                        @include alignment(center, center);
+                        @include size(32px,32px);
+                        background: white;
+                        &:hover{
+                            background-color: $brand-color;
+                        }
+                        &:hover svg{
+                            fill:rgb(255, 255, 255); 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

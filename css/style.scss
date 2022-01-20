@@ -1,0 +1,39 @@
+@import 'modules/mixin';
+@import 'modules/animation';
+
+$brand-color: #F16D7F;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+}
+.container{
+    max-width: 1160px;
+    min-width: 374px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.main{
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+}
+
+@import 'section/header';
+@import 'pages/index';
+@import 'pages/catalog';
+@import 'pages/product';
+@import 'section/product-card';
+@import 'section/form';
+@import 'pages/cart';
+@import 'pages/registration';
+@import 'section/footer';
+@import 'modules/media1024';
+@import 'modules/media650';

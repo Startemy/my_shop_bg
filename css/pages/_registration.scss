@@ -1,0 +1,65 @@
+.registration{
+    @include alignment(space-between,flex-start);
+    @include margtb(64,96);
+    & .reg-form{
+        max-width: 360px;
+        margin-right: 20px;
+    }
+    & .gender{
+        @include alignment(flex-start,center);
+        background: none;
+        margin: 0;
+        & i{
+            @include alignment(flex-start,center);
+            font-weight: 300;
+            font-size: 11px;
+            line-height: 13px;
+            font-style: normal;
+            &.other{
+                display: none;
+            }
+        }
+        & i:not(:last-child){
+            margin-right: 20px;
+        }
+        & input{
+            width: 17px;
+            margin-right: 10px; 
+        }
+    }
+    & .loyality{
+        max-width: 650px;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 29px;
+        & h3{
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 29px;
+        }
+        & div{
+            height: 100%;
+        }
+        &  p{
+            @include margtb(22,22);
+        }
+        & li{
+            list-style: none;
+            list-style-position: outside;
+            margin-left: 45px;
+            text-indent: -43px;
+        }
+        & li::before{
+            content: url(../image/icons/check_mark.svg);
+            margin-right: 23px;
+        }
+    }   
+    & .button__join{
+        @include botton($brand-color,$brand-color,167px,50px,39,42);
+        align-self: flex-start;
+        & svg{
+            margin-left: 20px;
+            fill: white;
+        }
+    }
+}

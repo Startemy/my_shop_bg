@@ -1,0 +1,119 @@
+
+@media (min-width:700px) and (max-width:1024px){
+    .billboard{
+        &__flex{
+            background-size: contain;
+            background-position: 100px bottom;
+        }
+        &__title{
+        margin-right: 0;
+        max-width: 310px; 
+            & h1{
+                font-weight: 900;
+                font-size: 44px;
+                line-height: 53px;
+            }
+            & span{
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 29px;  
+            }
+        }
+    }
+
+    .header{
+        &__menu-box{
+            display: none;
+        }
+    }
+
+    .stocks{
+        @include margtb(20,154);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 168px 116px;
+        gap: 20px;
+    }
+
+    .product-card{
+        & section{
+            gap: 16px;
+        }
+    }
+
+    .footer{
+        & .footer-top{
+                height: 610px;
+                &__box{
+                flex-direction: column;
+                & > div{
+                    @include margtb(24,24);
+                }
+            }
+        }
+        & .footer-mdl{
+            &__box{
+                @include alignment(center, center);
+                flex-direction: column;
+            }
+            &__intersec{
+                @include margtb(54,48);
+            }
+            &__subscribe{
+                margin-bottom: 146px;
+            }
+        }
+    }
+
+    /////Filter Catalog/////
+    .filter{
+        @include alignment(flex-end,center);
+    }
+    ///////PRODUCT///////
+    .desc-prod{
+        margin-top: 0;
+    }
+
+    .slide{
+        max-width: 768px;
+    }
+
+    ////////CART////////
+    .form{
+        @include alignment(center,center);
+        gap: 15px;
+        & > div:nth-child(2){
+            margin-top: 0px;
+        }
+    }
+    .cart{
+        @include alignment(center,center);
+        &__list-btnbox{
+            margin-bottom: 64px;
+        }
+    }
+
+    .registration{
+        & .gender{
+            & i{
+                &.other{
+                    display: block;
+                    @include alignment(flex-start,center);
+                }
+            }
+        }
+        & .loyality{
+            font-size: 16px;
+            line-height: 19px;
+            & h3{
+                font-size: 16px;
+                line-height: 19px;
+            }
+            &  p{
+                @include margtb(32,22);
+            }
+            & li:not(:last-child){
+                margin-bottom: 16px;
+            }
+        }   
+    }
+}

@@ -1,0 +1,257 @@
+
+@media (min-width:375px) and (max-width:699px){
+    .header{
+        &__rightpart{
+            & > li:nth-child(2){
+                display: none;
+            }
+            & > li:nth-child(3){
+                display: none;
+            }
+        }
+        &__quantity-pos{
+            position: relative;
+            & .quant{
+                @include alignment(center, center);
+                top: -20%;
+                left: 40%;
+                position: absolute;
+                width: 19px;
+                height: 19px;
+                border-radius: 200px;
+                background:#F16D7F;;
+                font-size: 12px;
+                line-height: 14px;
+                color: #FFFFFF;
+            }
+        }
+    }
+
+    .billboard{
+        height: calc(100vh - 79px);
+        background-color: #F1E4E6;
+        &__flex{
+            @include alignment(center,center);
+            background: none;
+        }
+        &__title{
+            margin-right: 0;
+            max-width: 262px;
+            & h1{
+                font-weight: 900;
+                font-size: 38px;
+                line-height: 46px;
+            }
+            & span{
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+    }
+
+    .stocks{
+        @include margtb(64,64);
+        grid-template-columns: 1fr;
+        grid-template-rows: 247px 247px 247px 111px;
+        gap: 20px;
+        &__ac{
+            grid-column: 1;
+        }
+        & > a{
+            width: 100%;
+            height: 111px;
+            text-decoration: none;
+            position: relative;
+            background-size: cover;
+        }
+        &--width{
+            width: 45%;
+        }
+        &--width-ac{
+            width: 45%;
+        }
+    }
+    .product-card{
+        & section{
+            @include alignment(center,center);
+        }
+    }
+/////page-title/////////
+    .page-title{
+        &__heading{
+        flex-direction: column;
+        @include alignment(center, center);
+        }
+        &__crumbs{
+            margin-top: 32px;
+        }
+    }
+////////FOOTER//////
+    .footer{
+        & .footer-top{
+                height: 610px;
+                &__box{
+                flex-direction: column;
+                & > div{
+                    @include margtb(24,24);
+                }
+            }
+        }
+        & .footer-mdl{
+            &__box{
+                @include alignment(center, center);
+                flex-direction: column;
+            }
+            &__intersec{
+                @include margtb(54,48);
+            }
+            &__subscribe{
+                margin-bottom: 146px;
+            }
+        }
+    }
+
+        /////Filter Catalog/////
+    .filter{
+        @include alignment(flex-end,center);
+        &__space{
+            padding-left: 0;
+            h2{
+                display: none;
+            }
+            svg{
+                width: 37px;
+                margin-left: 0px;
+            }
+        }
+        &__exception{
+            justify-self: flex-end;
+            & div:not(:last-child){
+                margin-right: 23px;
+            }
+            &--font{
+                h2{
+                    font-size: 10px;
+                    line-height: 12px;
+                }
+            }
+        }
+        &__exception-flex{
+            &--space{
+                right: 0px;
+            }
+        }
+    }
+
+    //////PRODUCT//////
+    .desc-prod{
+        margin-top: 0;
+        & p{
+            max-width: 326px;
+        }
+        &__grey-line{
+            width: 174px;
+        }
+    }
+    .slide{
+        max-width: 375px;
+    }
+    .product-card--mrg{
+            @include margtb(64,64);
+    }
+
+    /////////CART///////
+    .form{
+        margin-top: 48px;
+    }
+    .cart{
+        margin-top: 39px;
+        justify-content: center;
+        &__list{
+            max-width: 375px;
+            & > div{
+                max-height: 188px;
+                margin-left: 9px;
+                margin-right: 9px;
+                margin-bottom: 32px;
+                & img{
+                    max-height: 161px;
+                }
+                /////Описание товара//////
+                & > div{
+                    margin: 10px 40px 37px 17px;
+                    & h2{
+                        margin-bottom: 25px;
+                        max-width: 210px;
+                        line-height: 20px;
+                        & a{
+                        font-size: 16px;
+                        color: #222222;
+
+                        }
+                    }
+                    & p{
+                        font-size: 14px;
+                        line-height: 17px;
+                        & input{
+                            width: 24px;
+                            text-align: center;
+                            outline: none;
+                            border: 1px solid #EAEAEA;
+                            font-size: 10px;
+                            line-height: 12px;
+                            color: #656565;
+                            margin-left: 15px;
+                            &::-webkit-outer-spin-button, ///убираем стрелочки из input number
+                            &::-webkit-inner-spin-button {
+                                -webkit-appearance: none;
+                            }
+                        }
+                    }
+                }
+                & button{
+                    margin: 17px 12px 260px 0;
+                    & img{
+                        width: 9px;
+                    }
+                }
+            }
+        }
+        &__list-btnbox{
+            & button{
+                @include btn-cart(14,17,13,175px,33px,black);
+            }
+        }
+    }
+
+    .registration{
+        flex-direction: column;
+        align-items: center;
+        @include margtb(-8,96);
+        & .gender{
+            & i{
+                &.other{
+                    display: block;
+                    @include alignment(flex-start,center);
+                }
+            }
+        }
+        & .loyality{
+            max-width: 368px;
+            margin-top: -59px;
+            font-size: 16px;
+            line-height: 19px;
+            & h3{
+                font-size: 16px;
+                line-height: 19px;
+            }
+            &  p{
+                @include margtb(32,22);
+            }
+            & li:not(:last-child){
+                margin-bottom: 16px;
+            }
+        }
+    }
+}

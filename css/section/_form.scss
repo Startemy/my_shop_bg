@@ -1,0 +1,89 @@
+.form{
+    //margin-left: 128px;
+    margin-bottom: 57px;
+    & > div{
+        display: flex;
+        flex-direction: column;
+        & h2{
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            color: #222222;
+            margin-bottom: 10px;
+        }
+        & input{
+            width: 360px;
+            height: 45px;
+            margin: 10px auto 10px auto;
+            font-size: 16px;
+            &:focus{
+                outline: none;
+            }
+            &::placeholder{
+                color: black;
+                opacity: 0.4;
+            }
+            &:valid, &:invalid{
+                padding-left: 17px;
+                padding-right: 17px;
+            }
+            &::-webkit-outer-spin-button, ///убираем стрелочки из input number
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none; 
+            }
+        }
+        & p{
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 16px;
+            color: #B1B1B1;
+        }  
+        & button{
+            @include btn-cart(11,13,23,100px,35px, #4A4A4A);
+        }
+    }
+    
+    & > div:nth-child(2){
+        width: 360px;
+        background: #F5F3F3;
+        margin-top: 57px;
+        /////total price////////
+        & > div{
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            & p{
+                font-weight: 400;
+                font-size: 11px;
+                line-height: 13px;
+                color: #4A4A4A;
+                align-self: flex-end;
+                margin: 39px 34px 12px 0;
+                & span{
+                    margin-left: 20px;
+                }
+                &.grand{
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #222222;
+                    margin:0 37px 21px 0;
+                    & span{
+                        color: $brand-color;
+                        font-weight: bold;
+                    }
+                }
+            }
+            /////Серая линия//////
+            & > div{
+                border: 1px solid #EAEAEA;
+                background-color: #EAEAEA;
+                width: 275px;
+                align-self: center;
+                
+            }
+            & button{
+                @include botton($brand-color,$brand-color,273px,50px,17,42);
+            }
+        }
+    } 
+}

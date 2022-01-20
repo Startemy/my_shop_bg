@@ -783,7 +783,7 @@ body {
   position: relative;
 }
 
-.header__quantity-pos div {
+.header__quantity-pos .quant {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -793,8 +793,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
   top: -20%;
-  left: 75%;
+  right: 10%;
   position: absolute;
   width: 19px;
   height: 19px;
@@ -803,6 +804,51 @@ body {
   font-size: 12px;
   line-height: 14px;
   color: #FFFFFF;
+}
+
+.header .cart_preview {
+  top: 100%;
+  right: 20%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-align: center;
+  background-color: white;
+  font-size: 14px;
+}
+
+.header .cart_preview > ul {
+  border-bottom: 1px solid #c2c2ff;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 12em 8em 8em 5em;
+      grid-template-columns: 12em 8em 8em 5em;
+  list-style: none;
+  padding: 10px;
+}
+
+.header .cart_preview > ul:first-child {
+  font-weight: bold;
+}
+
+.header .cart_preview > p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.header .dispnone {
+  display: none;
 }
 
 .billboard {
@@ -2348,6 +2394,30 @@ body {
   }
   .header__rightpart > li:nth-child(3) {
     display: none;
+  }
+  .header__quantity-pos {
+    position: relative;
+  }
+  .header__quantity-pos .quant {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    top: -20%;
+    left: 40%;
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    border-radius: 200px;
+    background: #F16D7F;
+    font-size: 12px;
+    line-height: 14px;
+    color: #FFFFFF;
   }
   .billboard {
     height: calc(100vh - 79px);

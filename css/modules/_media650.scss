@@ -9,6 +9,22 @@
                 display: none;
             }
         }
+        &__quantity-pos{
+            position: relative;
+            & .quant{
+                @include alignment(center, center);
+                top: -20%;
+                left: 40%;
+                position: absolute;
+                width: 19px;
+                height: 19px;
+                border-radius: 200px;
+                background:#F16D7F;;
+                font-size: 12px;
+                line-height: 14px;
+                color: #FFFFFF;
+            }
+        }
     }
 
     .billboard{
@@ -20,7 +36,7 @@
         }
         &__title{
             margin-right: 0;
-            max-width: 262px; 
+            max-width: 262px;
             & h1{
                 font-weight: 900;
                 font-size: 38px;
@@ -60,7 +76,7 @@
         & section{
             @include alignment(center,center);
         }
-    }  
+    }
 /////page-title/////////
     .page-title{
         &__heading{
@@ -117,7 +133,7 @@
             &--font{
                 h2{
                     font-size: 10px;
-                    line-height: 12px;  
+                    line-height: 12px;
                 }
             }
         }
@@ -172,7 +188,7 @@
                         & a{
                         font-size: 16px;
                         color: #222222;
-                        
+
                         }
                     }
                     & p{
@@ -236,6 +252,6 @@
             & li:not(:last-child){
                 margin-bottom: 16px;
             }
-        }   
+        }
     }
 }
